@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confidential safeguarding, child protection, and vulnerable community reporting pathway for Mzimba South Luwerezi Constituency, Malawi.">
+  <title>Confidential Safeguarding & Welfare | Mzimba South Luwerezi</title>
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="safeguarding">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Quick Exit Safety Bar for Users in Distress -->
+  <div class="safety-exit-bar" role="region" aria-label="Emergency Browser Exit">
+    <div class="container flex justify-between items-center py-2">
+      <span class="text-xs font-bold" data-i18n="quick_exit_notice">Need to leave this page quickly?</span>
+      <a href="https://www.google.com" class="btn btn-secondary btn-xs safety-exit-btn" rel="nofollow noopener noreferrer" data-i18n="quick_exit_btn">
+        &times; Quick Exit (Leave Site)
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Mzimba South Luwerezi Constituency Home">
+        <img src="assets/images/logo.png" alt="Emblem of Luwerezi Constituency" class="brand-logo" width="68" height="68">
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="site_title">MZIMBA SOUTH LUWEREZI</span>
+          <span class="brand-subtitle" data-i18n="site_subtitle">Constituency Public Service Portal</span>
+        </div>
+      </a>
+
+      <div class="header-utilities">
+        <button id="languageToggleBtn" class="btn btn-outline lang-btn" aria-label="Switch Language / Sinthani Chilankhulo" type="button">
+          <span class="lang-icon" aria-hidden="true">&#127760;</span>
+          <span id="currentLangLabel">Chichewa</span>
+        </button>
+
+        <button id="mobileNavToggle" class="btn-menu-toggle" aria-expanded="false" aria-controls="primaryNavigation" aria-label="Toggle navigation menu" type="button">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Primary Navigation Bar -->
+    <nav id="primaryNavigation" class="site-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="container nav-container">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="projects.html" class="nav-link" data-i18n="nav_development">Development</a>
+            <ul class="dropdown-menu">
+              <li><a href="projects.html" data-i18n="nav_all_projects">Project Register</a></li>
+              <li><a href="verification.html" data-i18n="nav_oversight">Independent Oversight</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="report-issue.html" class="nav-link active" aria-current="page" data-i18n="nav_community_voice">Community Voice</a>
+            <ul class="dropdown-menu">
+              <li><a href="report-issue.html" data-i18n="nav_submit_report">Report an Issue</a></li>
+              <li><a href="track-report.html" data-i18n="nav_track_report">Track Existing Report</a></li>
+              <li><a href="safeguarding.html" class="active text-safeguarding" data-i18n="nav_safeguarding">Confidential Safeguarding</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="sports.html" class="nav-link" data-i18n="nav_sports">Constituency League</a>
+            <ul class="dropdown-menu">
+              <li><a href="sports.html" data-i18n="nav_sports_hub">Sports Overview</a></li>
+              <li><a href="sports-live.html" data-i18n="nav_live_matches">Live Match Center</a></li>
+              <li><a href="sports-fixtures.html" data-i18n="nav_fixtures_results">Fixtures & Results</a></li>
+              <li><a href="sports-tables.html" data-i18n="nav_league_tables">League Tables</a></li>
+              <li><a href="sports-teams.html" data-i18n="nav_teams_players">Teams & Players</a></li>
+              <li><a href="sports-stats.html" data-i18n="nav_top_scorers">Player Statistics</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="news.html" class="nav-link" data-i18n="nav_news">News & Bulletins</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contacts</a></li>
+          <li class="nav-item auth-item">
+            <a href="auth.html" id="authNavBtn" class="btn btn-secondary nav-btn" data-i18n="nav_resident_login">Resident Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main-body" role="main">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="report-issue.html" data-i18n="nav_community_voice">Community Voice</a></li>
+          <li aria-current="page" data-i18n="nav_safeguarding">Confidential Safeguarding</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header-section">
+      <div class="container">
+        <span class="badge badge-accent" data-i18n="badge_protected_pathway">PROTECTED & RESTRICTED INTAKE</span>
+        <h1 class="page-title" data-i18n="safeguarding_title">Confidential Safeguarding & Welfare Reporting</h1>
+        <p class="page-lead" data-i18n="safeguarding_lead">
+          A separate, strictly protected reporting pathway for reporting abuse, violence, child exploitation, and urgent welfare concerns involving children or vulnerable residents.
+        </p>
+      </div>
+    </section>
+
+    <!-- Emergency Toll-Free Helplines in Malawi -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="card p-6 bg-surface mb-8 border-2">
+          <h2 class="text-lg font-bold mb-2" data-i18n="emergency_contacts_heading">Immediate Danger & National Toll-Free Helplines</h2>
+          <p class="text-sm text-muted mb-4" data-i18n="emergency_contacts_text">
+            If a child or individual is in immediate physical danger, call authorized national crisis responders immediately. These services operate 24/7 across Malawi and do not require airtime on major mobile networks:
+          </p>
+          <div class="grid grid-3 gap-4">
+            <div class="card p-4 text-center">
+              <span class="font-bold text-2xl block font-mono">116</span>
+              <strong class="text-sm block mt-1" data-i18n="helpline_child_title">Malawi National Child Helpline</strong>
+              <span class="text-xs text-muted block" data-i18n="helpline_child_desc">Toll-Free 24/7 &bull; Child protection & rights</span>
+              <a href="tel:116" class="btn btn-outline btn-xs mt-3 w-full" data-i18n="btn_call_116">Call 116</a>
+            </div>
+            <div class="card p-4 text-center">
+              <span class="font-bold text-2xl block font-mono">5600</span>
+              <strong class="text-sm block mt-1" data-i18n="helpline_gbv_title">National GBV Helpline</strong>
+              <span class="text-xs text-muted block" data-i18n="helpline_gbv_desc">Toll-Free &bull; Gender-based violence crisis</span>
+              <a href="tel:5600" class="btn btn-outline btn-xs mt-3 w-full" data-i18n="btn_call_5600">Call 5600</a>
+            </div>
+            <div class="card p-4 text-center">
+              <span class="font-bold text-2xl block font-mono">997</span>
+              <strong class="text-sm block mt-1" data-i18n="helpline_police_title">Malawi Police Service</strong>
+              <span class="text-xs text-muted block" data-i18n="helpline_police_desc">Emergency response / Victim Support Unit</span>
+              <a href="tel:997" class="btn btn-outline btn-xs mt-3 w-full" data-i18n="btn_call_997">Call 997</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-grid-sidebar">
+          <!-- Main Form Column -->
+          <div class="content-main">
+            <div class="card p-6">
+              <!-- Privacy & Protocol Notice -->
+              <div class="prose text-sm text-muted mb-6">
+                <h2 class="text-base font-bold text-default mb-2" data-i18n="safeguarding_protocol_heading">Data Minimization & Access Restrictions</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li data-i18n="protocol_rule_1">Safeguarding reports are <strong>never</strong> broadcast to general constituency contacts, personal assistants, or media officers.</li>
+                  <li data-i18n="protocol_rule_2">Submissions are encrypted and accessible strictly by authorized child welfare and safeguarding personnel.</li>
+                  <li data-i18n="protocol_rule_3">Do not submit sensitive or identifying photographic evidence of children over open social networks or unencrypted WhatsApp chats.</li>
+                </ul>
+              </div>
+
+              <!-- Form Success Container -->
+              <div id="safeguardSuccessBox" class="alert-box alert-success mb-6" style="display: none;" role="alert">
+                <h3 class="font-bold text-lg mb-1" data-i18n="safeguard_success_title">Confidential Record Received</h3>
+                <p class="text-sm mb-2" data-i18n="safeguard_success_body">
+                  Your confidential concern has been routed securely to the safeguarding intake queue. Your private intake key is:
+                </p>
+                <div class="reference-code-display" id="safeguardRefDisplay">LUW-SAFE-XXXXX</div>
+                <p class="text-xs text-muted mt-2" data-i18n="safeguard_success_footer">
+                  This key will never be visible on public registers. Store it securely if you need to provide additional details later.
+                </p>
+              </div>
+
+              <!-- Safeguarding Submission Form -->
+              <form id="safeguardingReportForm" novalidate>
+                <div id="safeguardErrorBanner" class="alert-box alert-error mb-4" style="display: none;" role="alert"></div>
+
+                <!-- Concern Type -->
+                <div class="form-group mb-4">
+                  <label for="safeguardType" class="form-label required" data-i18n="label_concern_type">Nature of Safeguarding Concern</label>
+                  <select id="safeguardType" class="form-control" required aria-required="true">
+                    <option value="" disabled selected data-i18n="select_concern_type">-- Select nature of concern --</option>
+                    <option value="child_protection">Child Protection / Child Exploitation</option>
+                    <option value="gender_violence">Gender-Based Violence (GBV)</option>
+                    <option value="abuse_of_authority">Abuse of Power / Extortion by Local Officials</option>
+                    <option value="vulnerable_adult">Vulnerable Adult / Disability Neglect</option>
+                    <option value="other_sensitive">Other Confidential Welfare Concern</option>
+                  </select>
+                  <span class="field-error-message" id="safeguardTypeError" role="alert"></span>
+                </div>
+
+                <!-- Approximate Area -->
+                <div class="form-group mb-4">
+                  <label for="safeguardLocation" class="form-label required" data-i18n="label_approx_location">General Location / Village (Without exposing victims unnecessarily)</label>
+                  <input type="text" id="safeguardLocation" class="form-control" placeholder="e.g., Luwerezi South, near Champhira zone" required aria-required="true">
+                  <span class="field-error-message" id="safeguardLocationError" role="alert"></span>
+                </div>
+
+                <!-- Narrative Statement -->
+                <div class="form-group mb-4">
+                  <label for="safeguardNarrative" class="form-label required" data-i18n="label_factual_narrative">Factual Narrative</label>
+                  <textarea id="safeguardNarrative" class="form-control" rows="6" placeholder="State facts clearly: What occurred? Are vulnerable individuals currently at risk? Do not include unnecessary private information." required aria-required="true"></textarea>
+                  <span class="field-error-message" id="safeguardNarrativeError" role="alert"></span>
+                </div>
+
+                <!-- Secure Contact Details (Optional) -->
+                <div class="form-group mb-4">
+                  <label for="safeguardSafeContact" class="form-label" data-i18n="label_safe_contact">Safe Callback Method (Optional)</label>
+                  <input type="text" id="safeguardSafeContact" class="form-control" placeholder="Provide a safe phone number or trusted intermediary email if callback is safe">
+                  <span class="text-xs text-muted mt-1 block" data-i18n="hint_safe_contact">
+                    Only provide contact information if it is safe for you to receive a discrete telephone call. If not safe, leave blank.
+                  </span>
+                </div>
+
+                <!-- Independent Allegations Notice -->
+                <div class="callout callout-bordered p-4 mb-6">
+                  <strong class="text-xs block font-bold mb-1" data-i18n="allegation_notice_title">Concerns Involving Parliamentary Staff or Officials:</strong>
+                  <p class="text-xs text-muted" data-i18n="allegation_notice_text">
+                    If this concern directly involves the Member of Parliament, constituency administrators, or website managers, reports submitted under <em>"Abuse of Power"</em> bypass local desks and are directed to designated external oversight bodies and District Social Welfare officers.
+                  </p>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                  <button type="submit" id="submitSafeguardBtn" class="btn btn-primary btn-lg w-full" data-i18n="btn_submit_confidential_safeguard">
+                    Submit Confidential Safeguarding Report
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Sidebar Information Column -->
+          <aside class="content-sidebar">
+            <div class="card p-5 mb-4">
+              <h3 class="font-bold text-base mb-2" data-i18n="safeguard_statutory_heading">Statutory Referral Entities</h3>
+              <p class="text-xs text-muted mb-3" data-i18n="safeguard_statutory_desc">
+                In Malawi, formal safeguarding enforcement is governed by statutory agencies:
+              </p>
+              <ul class="text-xs space-y-2 text-muted">
+                <li>&bull; <strong>District Social Welfare Office:</strong> M'mbelwa District Council, Mzimba Boma.</li>
+                <li>&bull; <strong>Malawi Police Service:</strong> Victim Support Unit (VSU).</li>
+                <li>&bull; <strong>Human Rights Commission:</strong> Independent statutory reporting body.</li>
+              </ul>
+            </div>
+
+            <div class="card p-5 bg-surface">
+              <h3 class="font-bold text-base mb-2" data-i18n="safeguard_limits_title">Limits of Portal Confidentiality</h3>
+              <p class="text-xs text-muted" data-i18n="safeguard_limits_text">
+                Under the Child Care, Protection and Justice Act (Malawi), instances of ongoing child abuse or felony exploitation require mandatory statutory referral to formal law enforcement and social welfare officers. We do not provide judicial immunity or operate as a replacement for emergency police services.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Luwerezi Emblem" width="48" height="48" loading="lazy">
+          <div>
+            <div class="footer-title">Mzimba South Luwerezi</div>
+            <div class="footer-sub">Republic of Malawi</div>
+          </div>
+        </div>
+        <p class="footer-text" data-i18n="footer_summary">
+          Official constituency governance and community oversight platform operated under the office of Hon. Fischer Nkhwazi, Member of Parliament.
+        </p>
+        <p class="footer-motto"><em>Muumoza Kutukula Chigawa Chithu</em></p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_quick">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" data-i18n="nav_about">About the Constituency</a></li>
+          <li><a href="projects.html" data-i18n="nav_development">Development Projects</a></li>
+          <li><a href="verification.html" data-i18n="nav_oversight">Independent Oversight</a></li>
+          <li><a href="sports.html" data-i18n="nav_sports">Constituency League</a></li>
+          <li><a href="news.html" data-i18n="nav_news">Official Updates</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Directory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_reporting">Community Channels</h4>
+        <ul class="footer-links">
+          <li><a href="report-issue.html" data-i18n="nav_submit_report">Report an Issue</a></li>
+          <li><a href="track-report.html" data-i18n="nav_track_report">Track a Report</a></li>
+          <li><a href="safeguarding.html" class="text-safeguarding" data-i18n="nav_safeguarding">Confidential Safeguarding</a></li>
+          <li><a href="auth.html" data-i18n="nav_resident_login">Resident Account Login</a></li>
+          <li><a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+          <li><a href="terms.html" data-i18n="nav_terms">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_contact">Direct Contacts</h4>
+        <div class="footer-contact-item">
+          <strong>MP Office:</strong>
+          <a href="tel:+265988640190">+265 988 640 190</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Personal Assistant:</strong>
+          <a href="tel:+265991037710">+265 991 037 710</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Media & Comms:</strong>
+          <a href="tel:+265884305326">+265 884 305 326</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Email:</strong>
+          <a href="mailto:fischernkhwazi88@gmail.com">fischernkhwazi88@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright-notice">
+          &copy; <span id="currentYear">2026</span> Mzimba South Luwerezi Constituency. All Rights Reserved.
+        </p>
+        <p class="footer-legal-notice" data-i18n="legal_statement">
+          Published under official constituency community oversight. Data integrity is maintained strictly by documented verification.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Compact Developer Credit Floating Badge (Bottom-Left) -->
+  <aside id="developerBadgeContainer" class="dev-badge-anchor" aria-label="Website Developer Information">
+    <button id="devBadgeBtn" class="dev-badge-trigger" aria-haspopup="dialog" aria-expanded="false" title="Website Developed & Maintained By Abraham Msofi">
+      <img src="assets/images/profile.jpg" alt="Abraham Msofi developer profile" class="dev-badge-img" width="42" height="42" loading="lazy">
+    </button>
+    <div id="devBadgeCard" class="dev-badge-card" role="dialog" aria-labelledby="devCardTitle" hidden>
+      <div class="dev-card-header">
+        <img src="assets/images/profile.jpg" alt="Abraham Msofi" class="dev-card-avatar" width="48" height="48">
+        <div>
+          <span class="dev-card-kicker">Website Developed &amp; Maintained By</span>
+          <h3 id="devCardTitle" class="dev-card-name">Abraham Msofi</h3>
+          <p class="dev-card-role">Web Developer &amp; Digital Solutions</p>
+        </div>
+        <button id="devCardCloseBtn" class="dev-card-close" aria-label="Close developer card" type="button">&times;</button>
+      </div>
+      <div class="dev-card-actions">
+        <a href="https://wa.me/265993984344" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-xs">
+          WhatsApp: +265 993 984 344
+        </a>
+        <a href="tel:+265895380422" class="btn btn-outline btn-xs">
+          Call: +265 895 380 422
+        </a>
+        <a href="tel:+265897228943" class="btn btn-outline btn-xs">
+          Call: +265 897 228 943
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Superadmin Mount Point for Secret 4s Keypress (Ctrl+Shift+M) -->
+  <div id="adminPortalMount" hidden></div>
+
+  <!-- Main JavaScript Modules -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

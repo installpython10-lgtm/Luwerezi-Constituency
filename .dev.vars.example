@@ -1,0 +1,5 @@
+# Copy this file to .dev.vars and replace these values with your Supabase values.
+SUPABASE_URL=https://your-project-ref.supabase.co
+SUPABASE_ANON_KEY=your-legacy-anon-jwt
+# Alternatively, set SUPABASE_PUBLISHABLE_KEY instead of SUPABASE_ANON_KEY.
+# SUPABASE_PUBLISHABLE_KEY=sb_publishable_your-public-key

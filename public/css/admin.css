@@ -1,0 +1,262 @@
+/**
+ * Mzimba South Luwerezi Constituency — Superadmin Console Stylesheet
+ * Secure administrative workspace, data management tables, matchdesk controls & audit log displays.
+ * Refined Public Service Aesthetic.
+ */
+
+/* ==========================================================================
+   1. ADMIN HEADER & WORKSPACE NAVIGATION
+   ========================================================================== */
+.admin-body {
+  background-color: var(--bg-surface);
+  min-height: 100vh;
+}
+
+.admin-login-backdrop {
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.admin-login-backdrop[hidden] {
+  display: none !important;
+}
+
+.admin-login-dialog {
+  position: relative;
+  max-width: 32rem;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.admin-login-dialog #adminTotpQrCode {
+  width: min(15rem, 100%);
+  height: auto;
+}
+
+.admin-login-dialog #adminTotpSecret {
+  overflow-wrap: anywhere;
+}
+
+.admin-login-close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 1;
+}
+
+.admin-password-input {
+  padding-right: 64px;
+}
+
+.admin-password-toggle {
+  width: auto;
+  padding: 0 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+.admin-top-header {
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--brand-navy-800);
+  box-shadow: var(--shadow-xs);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.admin-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--border-medium);
+  background-color: var(--color-white);
+  padding: var(--space-3) var(--space-4) 0;
+}
+
+.admin-tab-btn {
+  background: var(--color-gray-100);
+  border: 1px solid var(--border-medium);
+  border-bottom: none;
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: all var(--transition-fast);
+}
+
+.admin-tab-btn:hover {
+  color: var(--brand-navy-900);
+  background-color: var(--brand-navy-50);
+}
+
+.admin-tab-btn.active {
+  background-color: var(--brand-navy-800);
+  color: var(--color-white);
+  border-color: var(--brand-navy-900);
+  box-shadow: var(--shadow-xs);
+}
+
+/* Panel Display States */
+.admin-panel {
+  display: block;
+  animation: adminFadeIn var(--transition-fast);
+}
+
+@keyframes adminFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-panel[hidden] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   2. ADMIN DATA TABLES & ACTION BUTTONS
+   ========================================================================== */
+.admin-panel .card {
+  border: 1px solid var(--border-subtle);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.admin-table-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+.btn-admin-action {
+  padding: 4px 10px;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  background-color: var(--color-white);
+  color: var(--brand-navy-900);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-admin-action:hover {
+  background-color: var(--brand-navy-800);
+  color: var(--color-white);
+  border-color: var(--brand-navy-900);
+}
+
+.btn-admin-danger {
+  color: #991b1b;
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}
+
+.btn-admin-danger:hover {
+  background-color: #dc2626;
+  color: var(--color-white);
+  border-color: #b91c1c;
+}
+
+/* ==========================================================================
+   3. MATCHDESK LIVE MATCH CONTROLLER
+   ========================================================================== */
+#liveMatchControlBar {
+  align-items: center;
+}
+
+#liveHomeScoreInput,
+#liveAwayScoreInput {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  width: 64px;
+  height: var(--input-height-base);
+  text-align: center;
+  border: 2px solid var(--brand-navy-800);
+  border-radius: var(--radius-sm);
+  color: var(--brand-navy-900);
+}
+
+/* ==========================================================================
+   4. AUDIT LOG SPECIFIC STYLES
+   ========================================================================== */
+#adminAuditTable {
+  font-size: var(--font-size-2xs);
+}
+
+#adminAuditTable td {
+  padding: var(--space-2) var(--space-3);
+  word-break: break-word;
+}
+
+.audit-action-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-medium);
+}
+
+.audit-action-insert {
+  background-color: var(--brand-green-50);
+  color: var(--brand-green-700);
+  border-color: var(--brand-green-100);
+}
+
+.audit-action-update {
+  background-color: var(--brand-navy-50);
+  color: var(--brand-navy-800);
+  border-color: var(--brand-navy-100);
+}
+
+.audit-action-delete {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border-color: #fca5a5;
+}
+
+/* ==========================================================================
+   5. SAFEGUARDING RESTRICTED QUEUE
+   ========================================================================== */
+#adminSafeguardTable td {
+  vertical-align: middle;
+}
+
+.safeguard-badge-priority {
+  background-color: #fff7ed;
+  color: #c2410c;
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-bold);
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: var(--radius-xs);
+  border: 1px solid #fed7aa;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DASHBOARD LAYOUTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .admin-tabs-nav {
+    flex-direction: column;
+    padding: var(--space-2);
+  }
+
+  .admin-tab-btn {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    text-align: left;
+  }
+
+  .admin-tab-btn.active {
+    border-color: var(--brand-navy-900);
+  }
+}

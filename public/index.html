@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official public service website for Mzimba South Luwerezi Constituency, Malawi. Track development projects, community oversight, resident issue reporting, and official constituency sports.">
+  <title>Mzimba South Luwerezi Constituency | Official Portal</title>
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Official Top Banner -->
+  <aside class="top-announcement-bar" role="complementary" aria-label="Official Public Service Notice">
+    <div class="container top-bar-content">
+      <span class="top-bar-badge" data-i18n="top_bar_badge">OFFICIAL PUBLIC PORTAL</span>
+      <span class="top-bar-text" data-i18n="top_bar_text">Republic of Malawi &bull; Mzimba South Luwerezi Parliamentary Office</span>
+      <div class="top-bar-actions">
+        <a href="track-report.html" class="top-bar-link" data-i18n="nav_track_report">Track a Report</a>
+        <a href="safeguarding.html" class="top-bar-link safeguarding-link" data-i18n="nav_safeguarding">Confidential Safeguarding</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Mzimba South Luwerezi Constituency Home">
+        <img src="assets/images/logo.png" alt="Emblem of Luwerezi Constituency" class="brand-logo" width="68" height="68">
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="site_title">MZIMBA SOUTH LUWEREZI</span>
+          <span class="brand-subtitle" data-i18n="site_subtitle">Constituency Public Service Portal</span>
+        </div>
+      </a>
+
+      <div class="header-utilities">
+        <!-- Prominent Language Switcher Button -->
+        <button id="languageToggleBtn" class="btn btn-outline lang-btn" aria-label="Switch Language / Sinthani Chilankhulo" type="button">
+          <span class="lang-icon" aria-hidden="true">&#127760;</span>
+          <span id="currentLangLabel">Chichewa</span>
+        </button>
+
+        <!-- Mobile Navigation Toggle Button -->
+        <button id="mobileNavToggle" class="btn-menu-toggle" aria-expanded="false" aria-controls="primaryNavigation" aria-label="Toggle navigation menu" type="button">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Primary Navigation Bar -->
+    <nav id="primaryNavigation" class="site-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="container nav-container">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page" data-i18n="nav_home">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="projects.html" class="nav-link" data-i18n="nav_development">Development</a>
+            <ul class="dropdown-menu">
+              <li><a href="projects.html" data-i18n="nav_all_projects">Project Register</a></li>
+              <li><a href="verification.html" data-i18n="nav_oversight">Independent Oversight</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="report-issue.html" class="nav-link" data-i18n="nav_community_voice">Community Voice</a>
+            <ul class="dropdown-menu">
+              <li><a href="report-issue.html" data-i18n="nav_submit_report">Report an Issue</a></li>
+              <li><a href="track-report.html" data-i18n="nav_track_report">Track Existing Report</a></li>
+              <li><a href="safeguarding.html" data-i18n="nav_safeguarding">Confidential Safeguarding</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="sports.html" class="nav-link" data-i18n="nav_sports">Constituency League</a>
+            <ul class="dropdown-menu">
+              <li><a href="sports.html" data-i18n="nav_sports_hub">Sports Overview</a></li>
+              <li><a href="sports-live.html" data-i18n="nav_live_matches">Live Match Center</a></li>
+              <li><a href="sports-fixtures.html" data-i18n="nav_fixtures_results">Fixtures & Results</a></li>
+              <li><a href="sports-tables.html" data-i18n="nav_league_tables">League Tables</a></li>
+              <li><a href="sports-teams.html" data-i18n="nav_teams_players">Teams & Players</a></li>
+              <li><a href="sports-stats.html" data-i18n="nav_top_scorers">Player Statistics</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="news.html" class="nav-link" data-i18n="nav_news">News & Bulletins</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contacts</a></li>
+          <li class="nav-item auth-item">
+            <a href="auth.html" id="authNavBtn" class="btn btn-secondary nav-btn" data-i18n="nav_resident_login">Resident Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main-body" role="main">
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-label">
+            <span class="badge badge-outline" data-i18n="hero_badge">PUBLIC ACCOUNTABILITY &bull; SERVICE TO RESIDENTS</span>
+          </div>
+          <h1 id="hero-title" class="hero-heading" data-i18n="hero_heading">
+            Constituency Governance Built on Evidence, Transparency, and Action.
+          </h1>
+          <p class="hero-description" data-i18n="hero_description">
+            Welcome to the official digital portal for Mzimba South Luwerezi Constituency, Malawi. Follow verified development projects, report public infrastructure issues, follow independent oversight audits, and track our local constituency sports league.
+          </p>
+          <div class="hero-cta-group">
+            <a href="projects.html" class="btn btn-primary" data-i18n="hero_btn_projects">Explore Projects Register</a>
+            <a href="report-issue.html" class="btn btn-secondary" data-i18n="hero_btn_report">Report Community Issue</a>
+          </div>
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-number" id="verifiedProjectsCount">&mdash;</span>
+              <span class="highlight-text" data-i18n="stat_projects_monitored">Projects Monitored</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-number" id="resolvedReportsCount">&mdash;</span>
+              <span class="highlight-text" data-i18n="stat_community_resolutions">Community Issues Logged</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-number" id="activeLeagueAreasCount">&mdash;</span>
+              <span class="highlight-text" data-i18n="stat_league_areas">Sports League Zones</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-crest-column" aria-hidden="true">
+          <div class="hero-crest-card">
+            <img src="assets/images/logo.png" alt="" class="hero-seal-img" width="280" height="280">
+            <p class="motto-caption"><em>Muumoza Kutukula Chigawa Chithu</em></p>
+            <p class="motto-subcaption" data-i18n="motto_subcaption">Together Developing Our Constituency</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Urgent Notices / Live Status Strip (if matches or announcements are live) -->
+    <section class="live-status-strip" id="globalLiveStrip" style="display: none;" aria-live="polite">
+      <div class="container live-strip-container">
+        <span class="badge badge-live">LIVE</span>
+        <span id="liveStripText" class="live-strip-text">Match in progress or urgent bulletin active.</span>
+        <a href="sports-live.html" class="live-strip-link" data-i18n="view_live_center">View Live Center &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Strategic Pillars / Quick Links Grid -->
+    <section class="section section-bordered pillars-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="pillars_heading">Public Service Modules</h2>
+          <p class="section-lead" data-i18n="pillars_subheading">Direct access to constituency services, transparency registers, and community management.</p>
+        </div>
+        <div class="grid grid-3">
+          <!-- Pillar 1: Projects -->
+          <article class="card card-interactive">
+            <div class="card-header">
+              <span class="card-index">01</span>
+              <h3 class="card-title" data-i18n="pillar_projects_title">Development Projects</h3>
+            </div>
+            <div class="card-body">
+              <p data-i18n="pillar_projects_desc">
+                Examine documented infrastructure, borehole construction, school blocks, road works, and health clinic developments with full transparency on funding, contracts, and progress photos.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="projects.html" class="card-link" data-i18n="pillar_projects_action">View Project Register &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Pillar 2: Oversight & Verification -->
+          <article class="card card-interactive">
+            <div class="card-header">
+              <span class="card-index">02</span>
+              <h3 class="card-title" data-i18n="pillar_oversight_title">Independent Oversight</h3>
+            </div>
+            <div class="card-body">
+              <p data-i18n="pillar_oversight_desc">
+                Review verified field inspection reports by community verification committees. Official claims are strictly cross-checked against independent ground evidence.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="verification.html" class="card-link" data-i18n="pillar_oversight_action">Check Verification Findings &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Pillar 3: Community Reporting -->
+          <article class="card card-interactive">
+            <div class="card-header">
+              <span class="card-index">03</span>
+              <h3 class="card-title" data-i18n="pillar_reporting_title">Community Reporting</h3>
+            </div>
+            <div class="card-body">
+              <p data-i18n="pillar_reporting_desc">
+                Submit reports on broken boreholes, impassable bridges, or public facility issues. Track resolution progress securely using your unique reference number.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="report-issue.html" class="card-link" data-i18n="pillar_reporting_action">Submit or Track a Report &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Pillar 4: Sports League -->
+          <article class="card card-interactive">
+            <div class="card-header">
+              <span class="card-index">04</span>
+              <h3 class="card-title" data-i18n="pillar_sports_title">Constituency League</h3>
+            </div>
+            <div class="card-body">
+              <p data-i18n="pillar_sports_desc">
+                Follow our official zonal competitions. Standings, upcoming fixtures, validated final match results, live score updates, and official top goal scorer tables.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="sports.html" class="card-link" data-i18n="pillar_sports_action">Visit League Center &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Pillar 5: Safeguarding Pathway -->
+          <article class="card card-interactive card-accent">
+            <div class="card-header">
+              <span class="card-index">05</span>
+              <h3 class="card-title" data-i18n="pillar_safeguarding_title">Confidential Safeguarding</h3>
+            </div>
+            <div class="card-body">
+              <p data-i18n="pillar_safeguarding_desc">
+                A separate, strictly encrypted intake channel for sensitive abuse, child protection, and vulnerable community concerns, routed only to authorized personnel.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="safeguarding.html" class="card-link" data-i18n="pillar_safeguarding_action">Confidential Support Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Pillar 6: Resident Account -->
+          <article class="card card-interactive">
+            <div class="card-header">
+              <span class="card-index">06</span>
+              <h3 class="card-title" data-i18n="pillar_resident_title">Resident Portal</h3>
+            </div>
+            <div class="card-body">
+              <p data-i18n="pillar_resident_desc">
+                Create a resident account to track multiple community submissions, receive direct case progress notifications, and participate in community feedback.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="auth.html" class="card-link" data-i18n="pillar_resident_action">Access Resident Portal &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Projects Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading-split">
+          <div>
+            <span class="badge" data-i18n="label_transparency">AUDITED INFRASTRUCTURE</span>
+            <h2 class="section-title" data-i18n="recent_projects_heading">Recent Constituency Projects</h2>
+            <p class="section-lead" data-i18n="recent_projects_lead">Track documented progress across education, water, healthcare, and infrastructure.</p>
+          </div>
+          <div class="section-heading-action">
+            <a href="projects.html" class="btn btn-outline" data-i18n="btn_view_all_projects">View All Projects</a>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="homeProjectsContainer">
+          <!-- Populated via js/modules/projects.js from verified database records -->
+          <div class="empty-state-card">
+            <p class="empty-state-title" data-i18n="loading_records">Loading verified project register...</p>
+            <p class="empty-state-subtitle" data-i18n="records_notice">Only records with verified documentation and committee audit logs are displayed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Leadership & Constituency Office Contacts -->
+    <section class="section section-bordered leadership-section" id="leadership">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge" data-i18n="label_leadership">REPRESENTATION & SERVICE</span>
+          <h2 class="section-title" data-i18n="leadership_heading">Constituency Office & Leadership</h2>
+          <p class="section-lead" data-i18n="leadership_lead">Direct, authenticated communication channels for the Member of Parliament and parliamentary office staff.</p>
+        </div>
+
+        <div class="grid grid-3 leadership-grid">
+          <!-- Member of Parliament Card -->
+          <article class="leadership-card featured-leadership-card">
+            <div class="leadership-media">
+              <img src="assets/images/fischer.jpeg" alt="Photograph of Hon. Fischer Nkhwazi, Member of Parliament for Mzimba South Luwerezi" class="leadership-avatar" width="160" height="160" loading="lazy">
+              <div class="leadership-badge">MEMBER OF PARLIAMENT</div>
+            </div>
+            <div class="leadership-details">
+              <h3 class="leadership-name">Hon. Fischer Nkhwazi</h3>
+              <p class="leadership-role" data-i18n="mp_role_label">Member of Parliament, Mzimba South Luwerezi</p>
+              <p class="leadership-bio" data-i18n="mp_bio_text">
+                Committed to transparent public governance, community-led development, independent project verification, and youth opportunity.
+              </p>
+              <div class="contact-actions-stack">
+                <a href="tel:+265988640190" class="btn btn-outline btn-sm btn-icon" aria-label="Call Hon. Fischer Nkhwazi at +265 988 640 190">
+                  <span aria-hidden="true">&#9742;</span> <span>Call: 0988 640 190</span>
+                </a>
+                <a href="https://wa.me/265988640190" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm btn-icon" aria-label="WhatsApp Hon. Fischer Nkhwazi at +265 988 640 190">
+                  <span aria-hidden="true">&#9993;</span> <span>WhatsApp: +265 988 640 190</span>
+                </a>
+                <a href="mailto:fischernkhwazi88@gmail.com" class="btn btn-outline btn-sm btn-icon" aria-label="Email Hon. Fischer Nkhwazi">
+                  <span aria-hidden="true">&#64;</span> <span>fischernkhwazi88@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Personal Assistant Card -->
+          <article class="leadership-card">
+            <div class="leadership-media">
+              <div class="leadership-avatar-placeholder" aria-hidden="true">FL</div>
+              <div class="leadership-badge-sub">OFFICE OF THE MP</div>
+            </div>
+            <div class="leadership-details">
+              <h3 class="leadership-name">Funny Longwe</h3>
+              <p class="leadership-role" data-i18n="pa_role_label">Personal Assistant to the MP</p>
+              <p class="leadership-bio" data-i18n="pa_bio_text">
+                Coordinates parliamentary inquiries, official constituency schedules, and administrative community requests.
+              </p>
+              <div class="contact-actions-stack">
+                <a href="tel:+265991037710" class="btn btn-outline btn-sm btn-icon" aria-label="Call Funny Longwe at +265 991 037 710">
+                  <span aria-hidden="true">&#9742;</span> <span>Call: 0991 037 710</span>
+                </a>
+                <a href="https://wa.me/265991037710" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm btn-icon" aria-label="WhatsApp Funny Longwe at +265 991 037 710">
+                  <span aria-hidden="true">&#9993;</span> <span>WhatsApp: +265 991 037 710</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Director of Media & Communications Card -->
+          <article class="leadership-card">
+            <div class="leadership-media">
+              <div class="leadership-avatar-placeholder" aria-hidden="true">AD</div>
+              <div class="leadership-badge-sub">COMMUNICATIONS</div>
+            </div>
+            <div class="leadership-details">
+              <h3 class="leadership-name">Alert Dzuka</h3>
+              <p class="leadership-role" data-i18n="media_role_label">Director of Media & Communications</p>
+              <p class="leadership-bio" data-i18n="media_bio_text">
+                Oversees official constituency public announcements, verified media releases, and community news broadcasts.
+              </p>
+              <div class="contact-actions-stack">
+                <a href="tel:+265884305326" class="btn btn-outline btn-sm btn-icon" aria-label="Call Alert Dzuka at +265 884 305 326">
+                  <span aria-hidden="true">&#9742;</span> <span>Call: 0884 305 326</span>
+                </a>
+                <a href="https://wa.me/265884305326" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm btn-icon" aria-label="WhatsApp Alert Dzuka at +265 884 305 326">
+                  <span aria-hidden="true">&#9993;</span> <span>WhatsApp: +265 884 305 326</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Issue Submission Bar -->
+    <section class="section section-cta">
+      <div class="container cta-container">
+        <div class="cta-content">
+          <h2 class="cta-heading" data-i18n="cta_report_heading">Notice a Broken Borehole, Bridge, or Facility?</h2>
+          <p class="cta-text" data-i18n="cta_report_text">
+            Submit a report directly to the constituency administration. You will receive an official tracking reference number to follow the status of your issue.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="report-issue.html" class="btn btn-primary" data-i18n="btn_lodge_report">Lodge Community Report</a>
+          <a href="track-report.html" class="btn btn-outline" data-i18n="btn_track_existing">Track Existing Report</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <!-- Col 1: Identity -->
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Luwerezi Emblem" width="48" height="48" loading="lazy">
+          <div>
+            <div class="footer-title">Mzimba South Luwerezi</div>
+            <div class="footer-sub">Republic of Malawi</div>
+          </div>
+        </div>
+        <p class="footer-text" data-i18n="footer_summary">
+          Official constituency governance and community oversight platform operated under the office of Hon. Fischer Nkhwazi, Member of Parliament.
+        </p>
+        <p class="footer-motto"><em>Muumoza Kutukula Chigawa Chithu</em></p>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_quick">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" data-i18n="nav_about">About the Constituency</a></li>
+          <li><a href="projects.html" data-i18n="nav_development">Development Projects</a></li>
+          <li><a href="verification.html" data-i18n="nav_oversight">Independent Oversight</a></li>
+          <li><a href="sports.html" data-i18n="nav_sports">Constituency League</a></li>
+          <li><a href="news.html" data-i18n="nav_news">Official Updates</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Directory</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Public Reporting & Transparency -->
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_reporting">Community Channels</h4>
+        <ul class="footer-links">
+          <li><a href="report-issue.html" data-i18n="nav_submit_report">Report an Issue</a></li>
+          <li><a href="track-report.html" data-i18n="nav_track_report">Track a Report</a></li>
+          <li><a href="safeguarding.html" class="text-safeguarding" data-i18n="nav_safeguarding">Confidential Safeguarding</a></li>
+          <li><a href="auth.html" data-i18n="nav_resident_login">Resident Account Login</a></li>
+          <li><a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+          <li><a href="terms.html" data-i18n="nav_terms">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Verified Contacts -->
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_contact">Direct Contacts</h4>
+        <div class="footer-contact-item">
+          <strong>MP Office:</strong>
+          <a href="tel:+265988640190">+265 988 640 190</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Personal Assistant:</strong>
+          <a href="tel:+265991037710">+265 991 037 710</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Media & Comms:</strong>
+          <a href="tel:+265884305326">+265 884 305 326</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Email:</strong>
+          <a href="mailto:fischernkhwazi88@gmail.com">fischernkhwazi88@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright-notice">
+          &copy; <span id="currentYear">2026</span> Mzimba South Luwerezi Constituency. All Rights Reserved.
+        </p>
+        <p class="footer-legal-notice" data-i18n="legal_statement">
+          Published under official constituency community oversight. Data integrity is maintained strictly by documented verification.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Compact Developer Credit Floating Badge (Bottom-Left) -->
+  <aside id="developerBadgeContainer" class="dev-badge-anchor" aria-label="Website Developer Information">
+    <button id="devBadgeBtn" class="dev-badge-trigger" aria-haspopup="dialog" aria-expanded="false" title="Website Developed & Maintained By Abraham Msofi">
+      <img src="assets/images/profile.jpg" alt="Abraham Msofi developer profile" class="dev-badge-img" width="42" height="42" loading="lazy">
+    </button>
+    <div id="devBadgeCard" class="dev-badge-card" role="dialog" aria-labelledby="devCardTitle" hidden>
+      <div class="dev-card-header">
+        <img src="assets/images/profile.jpg" alt="Abraham Msofi" class="dev-card-avatar" width="48" height="48">
+        <div>
+          <span class="dev-card-kicker">Website Developed &amp; Maintained By</span>
+          <h3 id="devCardTitle" class="dev-card-name">Abraham Msofi</h3>
+          <p class="dev-card-role">Web Developer &amp; Digital Solutions</p>
+        </div>
+        <button id="devCardCloseBtn" class="dev-card-close" aria-label="Close developer card" type="button">&times;</button>
+      </div>
+      <div class="dev-card-actions">
+        <a href="https://wa.me/265993984344" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-xs">
+          WhatsApp: +265 993 984 344
+        </a>
+        <a href="tel:+265895380422" class="btn btn-outline btn-xs">
+          Call: +265 895 380 422
+        </a>
+        <a href="tel:+265897228943" class="btn btn-outline btn-xs">
+          Call: +265 897 228 943
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Superadmin Mount Point for Secret 4s Keypress (Ctrl+Shift+M) -->
+  <div id="adminPortalMount"></div>
+
+  <!-- Main JavaScript Modules -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

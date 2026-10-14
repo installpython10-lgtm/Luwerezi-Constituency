@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Independent community oversight, field verification methodology, and inspection audit logs for Mzimba South Luwerezi Constituency development works.">
+  <title>Independent Verification & Community Oversight | Mzimba South Luwerezi</title>
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="verification">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Official Top Banner -->
+  <aside class="top-announcement-bar" role="complementary" aria-label="Official Public Service Notice">
+    <div class="container top-bar-content">
+      <span class="top-bar-badge" data-i18n="top_bar_badge">OFFICIAL PUBLIC PORTAL</span>
+      <span class="top-bar-text" data-i18n="top_bar_text">Republic of Malawi &bull; Mzimba South Luwerezi Parliamentary Office</span>
+      <div class="top-bar-actions">
+        <a href="track-report.html" class="top-bar-link" data-i18n="nav_track_report">Track a Report</a>
+        <a href="safeguarding.html" class="top-bar-link safeguarding-link" data-i18n="nav_safeguarding">Confidential Safeguarding</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="index.html" class="brand-link" aria-label="Mzimba South Luwerezi Constituency Home">
+        <img src="assets/images/logo.png" alt="Emblem of Luwerezi Constituency" class="brand-logo" width="68" height="68">
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="site_title">MZIMBA SOUTH LUWEREZI</span>
+          <span class="brand-subtitle" data-i18n="site_subtitle">Constituency Public Service Portal</span>
+        </div>
+      </a>
+
+      <div class="header-utilities">
+        <button id="languageToggleBtn" class="btn btn-outline lang-btn" aria-label="Switch Language / Sinthani Chilankhulo" type="button">
+          <span class="lang-icon" aria-hidden="true">&#127760;</span>
+          <span id="currentLangLabel">Chichewa</span>
+        </button>
+
+        <button id="mobileNavToggle" class="btn-menu-toggle" aria-expanded="false" aria-controls="primaryNavigation" aria-label="Toggle navigation menu" type="button">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Primary Navigation Bar -->
+    <nav id="primaryNavigation" class="site-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="container nav-container">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="projects.html" class="nav-link active" aria-current="page" data-i18n="nav_development">Development</a>
+            <ul class="dropdown-menu">
+              <li><a href="projects.html" data-i18n="nav_all_projects">Project Register</a></li>
+              <li><a href="verification.html" class="active" data-i18n="nav_oversight">Independent Oversight</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="report-issue.html" class="nav-link" data-i18n="nav_community_voice">Community Voice</a>
+            <ul class="dropdown-menu">
+              <li><a href="report-issue.html" data-i18n="nav_submit_report">Report an Issue</a></li>
+              <li><a href="track-report.html" data-i18n="nav_track_report">Track Existing Report</a></li>
+              <li><a href="safeguarding.html" data-i18n="nav_safeguarding">Confidential Safeguarding</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="sports.html" class="nav-link" data-i18n="nav_sports">Constituency League</a>
+            <ul class="dropdown-menu">
+              <li><a href="sports.html" data-i18n="nav_sports_hub">Sports Overview</a></li>
+              <li><a href="sports-live.html" data-i18n="nav_live_matches">Live Match Center</a></li>
+              <li><a href="sports-fixtures.html" data-i18n="nav_fixtures_results">Fixtures & Results</a></li>
+              <li><a href="sports-tables.html" data-i18n="nav_league_tables">League Tables</a></li>
+              <li><a href="sports-teams.html" data-i18n="nav_teams_players">Teams & Players</a></li>
+              <li><a href="sports-stats.html" data-i18n="nav_top_scorers">Player Statistics</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="news.html" class="nav-link" data-i18n="nav_news">News & Bulletins</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contacts</a></li>
+          <li class="nav-item auth-item">
+            <a href="auth.html" id="authNavBtn" class="btn btn-secondary nav-btn" data-i18n="nav_resident_login">Resident Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="main-body" role="main">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb-list">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="projects.html" data-i18n="nav_development_register">Development Projects</a></li>
+          <li aria-current="page" data-i18n="nav_oversight">Independent Oversight & Verification</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header-section">
+      <div class="container">
+        <span class="badge" data-i18n="badge_social_auditing">CIVIC INTEGRITY & SOCIAL AUDITING</span>
+        <h1 class="page-title" data-i18n="oversight_heading">Independent Verification Framework</h1>
+        <p class="page-lead" data-i18n="oversight_lead">
+          In Mzimba South Luwerezi, no public infrastructure project is certified as completed simply because an administrative claim is filed. Every project must undergo independent ground inspection by community verification committees.
+        </p>
+      </div>
+    </section>
+
+    <!-- Framework Principles -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="card p-6">
+            <div class="card-index">01</div>
+            <h3 class="text-lg font-bold mb-2" data-i18n="oversight_principle_1_title">Dual-Source Reporting</h3>
+            <p class="text-sm text-muted" data-i18n="oversight_principle_1_desc">
+              Official progress statements from contractors and local council desks are stored separately from physical inspection findings logged by community observers.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <div class="card-index">02</div>
+            <h3 class="text-lg font-bold mb-2" data-i18n="oversight_principle_2_title">Photographic & GPS Evidence</h3>
+            <p class="text-sm text-muted" data-i18n="oversight_principle_2_desc">
+              Certification requires dated on-site photographs, verifiable GPS benchmarks, and interviews with local community beneficiaries (e.g., school committees, water users).
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <div class="card-index">03</div>
+            <h3 class="text-lg font-bold mb-2" data-i18n="oversight_principle_3_title">Responsible Disclosure</h3>
+            <p class="text-sm text-muted" data-i18n="oversight_principle_3_desc">
+              When paperwork is incomplete, the project is marked <em>"Unable to Confirm"</em>. This serves as an evidentiary disclaimer, not an unsubstantiated accusation of misconduct.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verification Status Glossary -->
+    <section class="section section-bordered bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="status_definitions_heading">Standardized Project Status Definitions</h2>
+          <p class="section-lead" data-i18n="status_definitions_lead">
+            Understanding what each status indicator on our public register guarantees to the residents of Mzimba South Luwerezi.
+          </p>
+        </div>
+
+        <div class="status-glossary-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 220px;" data-i18n="col_status_label">Status Label</th>
+                <th scope="col" data-i18n="col_administrative_meaning">Official Meaning</th>
+                <th scope="col" data-i18n="col_verification_requirement">Verification Condition Required</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-proposed">Proposed</span></td>
+                <td>Project identified during constituency planning or Area Development Committee (ADC) deliberations.</td>
+                <td>Awaiting budgetary approval and formal funding appropriation.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td>Funding allocated through CDF, District Council, or partner donor programme; procurement scheduled.</td>
+                <td>Disbursement voucher or council resolution verified.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-in-progress">In Progress</span></td>
+                <td>Contractor appointed or community procurement underway; active ground works initiated.</td>
+                <td>Interim inspection report confirms works on site.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-delayed">Delayed</span></td>
+                <td>Work has exceeded target timeline or halted due to materials, weather, or contractor issues.</td>
+                <td>Documented explanation logged with revised completion target.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-reported-completed">Reported Completed</span></td>
+                <td>The implementing agency or contractor has declared works finished.</td>
+                <td>Pending independent committee ground audit and resident sign-off.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-verified">Independently Verified</span></td>
+                <td>Field inspection completed. Water flowing, classroom in use, or bridge safely open to traffic.</td>
+                <td>Photographic proof, community sign-off, and inspection date verified.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-unconfirmed">Unable to Confirm</span></td>
+                <td>Incomplete project documentation or conflicting field reports pending re-inspection.</td>
+                <td>Missing documents clearly highlighted without premature conclusions.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inspection Logs Feed -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading-split">
+          <div>
+            <span class="badge" data-i18n="badge_audit_trail">PUBLIC AUDIT TRAIL</span>
+            <h2 class="section-title" data-i18n="recent_oversight_heading">Recent Verification Field Logs</h2>
+            <p class="section-lead" data-i18n="recent_oversight_lead">Records of verified field inspections conducted across Luwerezi zones.</p>
+          </div>
+          <div class="section-heading-action">
+            <a href="projects.html" class="btn btn-outline" data-i18n="btn_view_full_projects_reg">View All Projects</a>
+          </div>
+        </div>
+
+        <div id="oversightLogsContainer" class="oversight-logs-stack">
+          <!-- Populated by js/modules/projects.js -->
+          <div class="empty-state-card">
+            <p class="empty-state-title" data-i18n="loading_audit_logs">Loading verified field audit logs...</p>
+            <p class="empty-state-subtitle" data-i18n="audit_logs_db_notice">Inspecting database for documented community oversight reports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citizen Auditor Call to Action -->
+    <section class="section section-bordered bg-surface">
+      <div class="container">
+        <div class="audit-volunteer-card">
+          <div class="audit-volunteer-content">
+            <h3 class="text-xl font-bold mb-2" data-i18n="audit_citizen_heading">Participate in Community Monitoring</h3>
+            <p class="text-sm text-muted mb-4" data-i18n="audit_citizen_desc">
+              Are you a member of a local School Management Committee, Village Health Action Team, or Water Point Committee in Mzimba South Luwerezi? You can submit ground verification notes directly to the oversight coordinator.
+            </p>
+            <div class="flex gap-3">
+              <a href="report-issue.html" class="btn btn-primary btn-sm" data-i18n="btn_submit_field_finding">Submit Field Finding</a>
+              <a href="contact.html" class="btn btn-outline btn-sm" data-i18n="btn_contact_oversight_team">Contact Oversight Team</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="Luwerezi Emblem" width="48" height="48" loading="lazy">
+          <div>
+            <div class="footer-title">Mzimba South Luwerezi</div>
+            <div class="footer-sub">Republic of Malawi</div>
+          </div>
+        </div>
+        <p class="footer-text" data-i18n="footer_summary">
+          Official constituency governance and community oversight platform operated under the office of Hon. Fischer Nkhwazi, Member of Parliament.
+        </p>
+        <p class="footer-motto"><em>Muumoza Kutukula Chigawa Chithu</em></p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_quick">Quick Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" data-i18n="nav_about">About the Constituency</a></li>
+          <li><a href="projects.html" data-i18n="nav_development">Development Projects</a></li>
+          <li><a href="verification.html" data-i18n="nav_oversight">Independent Oversight</a></li>
+          <li><a href="sports.html" data-i18n="nav_sports">Constituency League</a></li>
+          <li><a href="news.html" data-i18n="nav_news">Official Updates</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact Directory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_reporting">Community Channels</h4>
+        <ul class="footer-links">
+          <li><a href="report-issue.html" data-i18n="nav_submit_report">Report an Issue</a></li>
+          <li><a href="track-report.html" data-i18n="nav_track_report">Track a Report</a></li>
+          <li><a href="safeguarding.html" class="text-safeguarding" data-i18n="nav_safeguarding">Confidential Safeguarding</a></li>
+          <li><a href="auth.html" data-i18n="nav_resident_login">Resident Account Login</a></li>
+          <li><a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+          <li><a href="terms.html" data-i18n="nav_terms">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading" data-i18n="footer_links_contact">Direct Contacts</h4>
+        <div class="footer-contact-item">
+          <strong>MP Office:</strong>
+          <a href="tel:+265988640190">+265 988 640 190</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Personal Assistant:</strong>
+          <a href="tel:+265991037710">+265 991 037 710</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Media & Comms:</strong>
+          <a href="tel:+265884305326">+265 884 305 326</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Email:</strong>
+          <a href="mailto:fischernkhwazi88@gmail.com">fischernkhwazi88@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright-notice">
+          &copy; <span id="currentYear">2026</span> Mzimba South Luwerezi Constituency. All Rights Reserved.
+        </p>
+        <p class="footer-legal-notice" data-i18n="legal_statement">
+          Published under official constituency community oversight. Data integrity is maintained strictly by documented verification.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Compact Developer Credit Floating Badge (Bottom-Left) -->
+  <aside id="developerBadgeContainer" class="dev-badge-anchor" aria-label="Website Developer Information">
+    <button id="devBadgeBtn" class="dev-badge-trigger" aria-haspopup="dialog" aria-expanded="false" title="Website Developed & Maintained By Abraham Msofi">
+      <img src="assets/images/profile.jpg" alt="Abraham Msofi developer profile" class="dev-badge-img" width="42" height="42" loading="lazy">
+    </button>
+    <div id="devBadgeCard" class="dev-badge-card" role="dialog" aria-labelledby="devCardTitle" hidden>
+      <div class="dev-card-header">
+        <img src="assets/images/profile.jpg" alt="Abraham Msofi" class="dev-card-avatar" width="48" height="48">
+        <div>
+          <span class="dev-card-kicker">Website Developed &amp; Maintained By</span>
+          <h3 id="devCardTitle" class="dev-card-name">Abraham Msofi</h3>
+          <p class="dev-card-role">Web Developer &amp; Digital Solutions</p>
+        </div>
+        <button id="devCardCloseBtn" class="dev-card-close" aria-label="Close developer card" type="button">&times;</button>
+      </div>
+      <div class="dev-card-actions">
+        <a href="https://wa.me/265993984344" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-xs">
+          WhatsApp: +265 993 984 344
+        </a>
+        <a href="tel:+265895380422" class="btn btn-outline btn-xs">
+          Call: +265 895 380 422
+        </a>
+        <a href="tel:+265897228943" class="btn btn-outline btn-xs">
+          Call: +265 897 228 943
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Superadmin Mount Point for Secret 4s Keypress (Ctrl+Shift+M) -->
+  <div id="adminPortalMount" hidden></div>
+
+  <!-- Main JavaScript Modules -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Robots.txt for Mzimba South Luwerezi Constituency Official Portal
+# Republic of Malawi
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /projects.html
+Allow: /project-detail.html
+Allow: /verification.html
+Allow: /report-issue.html
+Allow: /track-report.html
+Allow: /safeguarding.html
+Allow: /sports.html
+Allow: /sports-teams.html
+Allow: /sports-tables.html
+Allow: /sports-fixtures.html
+Allow: /sports-live.html
+Allow: /sports-stats.html
+Allow: /news.html
+Allow: /contact.html
+Allow: /privacy.html
+Allow: /terms.html
+
+# Disallow Private & Administrative Consoles
+Disallow: /admin.html
+Disallow: /resident-dashboard.html
+Disallow: /auth.html
+
+# Sitemap
+Sitemap: https://mzimba-south-luwerezi.pages.dev/sitemap.xml

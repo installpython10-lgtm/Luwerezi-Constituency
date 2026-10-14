@@ -1,0 +1,20 @@
+
+# Local development secrets
+/.dev.vars
+/.dev.vars.*
+!/.dev.vars.example
+/.env
+/.env.*
+!/public/.env.example
+
+# Cloudflare local state
+/.wrangler/
+
+# Dependencies and temporary files
+/node_modules/
+/npm-debug.log*
+/.DS_Store
+/Thumbs.db
+*.log
+*.bak
+*.backup

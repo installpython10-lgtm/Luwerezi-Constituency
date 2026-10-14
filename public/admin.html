@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure Superadmin Administrative Console for Mzimba South Luwerezi Constituency Website. Authenticated project oversight, sports management, and case handling.">
+  <title>Superadmin Console | Mzimba South Luwerezi</title>
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/sports.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-page="admin" class="admin-body">
+  <!-- Accessibility Skip Link -->
+  <a href="#adminMainContent" class="skip-link" data-i18n="skip_to_content">Skip to main content</a>
+
+  <!-- Admin Top Security Header -->
+  <header class="admin-top-header" role="banner">
+    <div class="container flex justify-between items-center py-2">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Luwerezi Emblem" width="36" height="36" class="brand-logo">
+        <div>
+          <span class="font-bold text-sm block tracking-wide">LUWEREZI SUPERADMIN CONSOLE</span>
+          <span class="text-xs text-muted block">Constituency Operational Management Desk</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="languageToggleBtn" class="btn btn-outline btn-xs lang-btn" aria-label="Switch Language" type="button">
+          <span class="lang-icon" aria-hidden="true">&#127760;</span>
+          <span id="currentLangLabel">Chichewa</span>
+        </button>
+        <div id="adminUserSessionMeta" class="text-xs font-mono" style="display: none;">
+          <span id="adminSessionEmail">admin@constituency.gov</span> &bull;
+          <button type="button" id="adminLogoutTopBtn" class="underline font-bold text-xs">Log Out</button>
+        </div>
+        <a href="index.html" class="btn btn-outline btn-xs" target="_blank" rel="noopener noreferrer">
+          &larr; Public Portal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="adminMainContent" class="main-body" role="main">
+    <!-- SECTION A: SUPERADMIN LOGIN PANEL (Visible when unauthenticated) -->
+    <section id="adminLoginSection" class="modal-backdrop admin-login-backdrop" role="dialog" aria-modal="true"
+             aria-labelledby="adminLoginTitle" hidden>
+      <div class="container max-w-md">
+        <div class="card p-8 border-2 modal-dialog admin-login-dialog">
+          <button id="adminLoginCloseBtn" class="modal-close-btn admin-login-close" type="button"
+                  aria-label="Close Superadmin login">&times;</button>
+          <div class="text-center mb-6">
+            <h1 id="adminLoginTitle" class="text-2xl font-bold tracking-tight">Superadmin Login</h1>
+          </div>
+
+          <div id="adminAuthAlert" class="alert-box mb-4" role="alert" hidden></div>
+
+          <section id="adminMfaDiagnostics" class="card p-4 mb-4" hidden aria-live="polite"
+                   aria-labelledby="adminMfaDiagnosticsTitle">
+            <h2 id="adminMfaDiagnosticsTitle" class="text-base font-bold">Authenticator Diagnostics</h2>
+            <p id="adminMfaDiagnosticsAccount" class="text-xs text-muted mt-1 break-all"></p>
+            <p id="adminMfaDiagnosticsStatus" class="text-xs mt-2"></p>
+            <ul id="adminMfaDiagnosticsFactors" class="text-xs mt-2 break-all"></ul>
+          </section>
+
+          <form id="superadminLoginForm" method="post" novalidate>
+            <div class="form-group mb-4">
+              <label for="adminEmail" class="form-label required">Administrator Email</label>
+              <input type="email" id="adminEmail" class="form-control" required autocomplete="email" placeholder="admin@example.com">
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="adminPassword" class="form-label required">Administrator Password</label>
+              <div class="password-input-wrapper">
+                <input type="password" id="adminPassword" class="form-control admin-password-input" required autocomplete="current-password" placeholder="Enter password">
+                <button type="button" id="adminPasswordToggle" class="toggle-password-btn admin-password-toggle"
+                      aria-label="Show password" aria-pressed="false">Show</button>
+              </div>
+            </div>
+
+            <button type="submit" id="adminLoginSubmitBtn" class="btn btn-primary w-full btn-lg mb-4">
+              Login
+            </button>
+          </form>
+
+          <section id="adminTotpEnrollment" class="card p-4" hidden aria-labelledby="adminTotpEnrollmentTitle">
+            <h2 id="adminTotpEnrollmentTitle" class="text-base font-bold">Set Up Authenticator</h2>
+            <p id="adminTotpEnrollmentDescription" class="text-xs text-muted mt-1"></p>
+            <img id="adminTotpQrCode" alt="Authenticator setup QR code" class="mx-auto my-3" hidden>
+            <p class="text-xs font-bold">Manual setup key</p>
+            <code id="adminTotpSecret" class="block text-xs break-all my-2"></code>
+            <form id="adminTotpEnrollmentForm" novalidate>
+              <label for="adminTotpEnrollmentCode" class="form-label required">Six-digit code</label>
+              <input id="adminTotpEnrollmentCode" class="form-control font-mono tracking-widest text-center mb-3"
+                     type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+                     autocomplete="one-time-code" required>
+              <button id="adminTotpEnrollmentSubmit" class="btn btn-primary w-full" type="submit">
+                Verify Authenticator
+              </button>
+              <button id="adminTotpRestart" class="btn btn-outline w-full mt-2" type="button" hidden>
+                Restart Unfinished Setup
+              </button>
+            </form>
+          </section>
+
+          <section id="adminTotpChallengeSection" class="card p-4" hidden aria-labelledby="adminTotpChallengeTitle">
+            <h2 id="adminTotpChallengeTitle" class="text-base font-bold">Verify Authenticator</h2>
+            <p class="text-xs text-muted mt-1 mb-3">Enter the current six-digit code from your verified authenticator.</p>
+            <form id="adminTotpChallengeForm" novalidate>
+              <label for="adminTotpCode" class="form-label required">Six-digit code</label>
+              <input id="adminTotpCode" class="form-control font-mono tracking-widest text-center mb-3"
+                     type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+                     autocomplete="one-time-code" required>
+              <button id="adminTotpChallengeSubmit" class="btn btn-primary w-full" type="submit">
+                Verify and Continue
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION B: SUPERADMIN CONTROL CONSOLE (Visible upon verified session) -->
+    <section id="adminConsoleSection" class="section pt-4" style="display: none;">
+      <div class="container-fluid px-6">
+        <div id="adminLocalPreviewNotice" class="alert-box mb-4" role="status" hidden>
+          <strong>Local development preview only.</strong>
+          You are signed in with a valid Supabase session, but this session has not established MFA assurance level AAL2.
+          Protected dashboard data and controls are hidden. Server-side authorization and RLS continue to require AAL2.
+          Configure and verify an authenticator before deployment.
+        </div>
+
+        <!-- Dashboard Navigation Strip -->
+        <nav class="admin-tabs-nav mb-6" role="tablist" aria-label="Superadmin Workspace Tabs">
+          <button type="button" class="admin-tab-btn active" id="tabProjectsBtn" role="tab" aria-selected="true" aria-controls="adminProjectsPanel">
+            &#127959; Projects Register
+          </button>
+          <button type="button" class="admin-tab-btn" id="tabReportsBtn" role="tab" aria-selected="false" aria-controls="adminReportsPanel">
+            &#128227; Community Reports
+          </button>
+          <button type="button" class="admin-tab-btn" id="tabSafeguardingBtn" role="tab" aria-selected="false" aria-controls="adminSafeguardingPanel">
+            &#9888; Safeguarding Intake
+          </button>
+          <button type="button" class="admin-tab-btn" id="tabSportsAdminBtn" role="tab" aria-selected="false" aria-controls="adminSportsPanel">
+            &#9917; Sports &amp; League Desk
+          </button>
+          <button type="button" class="admin-tab-btn" id="tabBulletinsBtn" role="tab" aria-selected="false" aria-controls="adminBulletinsPanel">
+            &#128240; Bulletins &amp; News
+          </button>
+          <button type="button" class="admin-tab-btn" id="tabAuditLogsBtn" role="tab" aria-selected="false" aria-controls="adminAuditPanel">
+            &#128269; Audit Trail
+          </button>
+        </nav>
+
+        <!-- PANEL 1: PROJECTS REGISTER MANAGEMENT -->
+        <div id="adminProjectsPanel" role="tabpanel" aria-labelledby="tabProjectsBtn" class="admin-panel">
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <h2 class="text-xl font-bold">Constituency Development Projects</h2>
+              <p class="text-xs text-muted">Create new projects, update expenditures, attach ground photos, and log oversight committee inspections.</p>
+            </div>
+            <button type="button" id="btnAddNewProject" class="btn btn-primary btn-sm">+ Add New Project</button>
+          </div>
+
+          <!-- Project Creation/Edit Form (Collapsible) -->
+          <div id="projectFormContainer" class="card p-6 mb-6 bg-surface border" style="display: none;">
+            <div class="flex justify-between items-center mb-4 border-b pb-2">
+              <h3 class="font-bold text-base" id="projectFormTitle">Record New Constituency Project</h3>
+              <button type="button" id="closeProjectFormBtn" class="btn btn-outline btn-xs">&times; Close</button>
+            </div>
+            <form id="adminProjectForm" novalidate>
+              <input type="hidden" id="editProjectId">
+              <div class="grid grid-3 gap-4 mb-4">
+                <div class="form-group">
+                  <label for="pName" class="form-label required">Project Name</label>
+                  <input type="text" id="pName" class="form-control" required placeholder="e.g., Luwerezi Primary School Block">
+                </div>
+                <div class="form-group">
+                  <label for="pCategory" class="form-label required">Category</label>
+                  <select id="pCategory" class="form-control" required>
+                    <option value="water">Water &amp; Sanitation</option>
+                    <option value="education">Education &amp; Schools</option>
+                    <option value="health">Health &amp; Clinics</option>
+                    <option value="roads">Roads &amp; Bridges</option>
+                    <option value="community">Community Facilities</option>
+                    <option value="youth_sports">Sports &amp; Youth</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="pLocation" class="form-label required">Location / Ward</label>
+                  <input type="text" id="pLocation" class="form-control" required placeholder="Ward, Village or GPS">
+                </div>
+              </div>
+
+              <div class="grid grid-3 gap-4 mb-4">
+                <div class="form-group">
+                  <label for="pFunding" class="form-label required">Funding Source</label>
+                  <input type="text" id="pFunding" class="form-control" required placeholder="e.g., CDF 2025/2026, Council Grant">
+                </div>
+                <div class="form-group">
+                  <label for="pBudget" class="form-label">Approved Budget (MWK)</label>
+                  <input type="number" id="pBudget" class="form-control" placeholder="Documented amount">
+                </div>
+                <div class="form-group">
+                  <label for="pExpenditure" class="form-label">Actual Expenditure (MWK)</label>
+                  <input type="number" id="pExpenditure" class="form-control" placeholder="Verified spent to date">
+                </div>
+              </div>
+
+              <div class="grid grid-3 gap-4 mb-4">
+                <div class="form-group">
+                  <label for="pImplementer" class="form-label">Implementing Agency / Contractor</label>
+                  <input type="text" id="pImplementer" class="form-control" placeholder="Contractor name or committee">
+                </div>
+                <div class="form-group">
+                  <label for="pStatus" class="form-label required">Administrative Status</label>
+                  <select id="pStatus" class="form-control" required>
+                    <option value="Proposed">Proposed</option>
+                    <option value="Approved">Approved</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Delayed">Delayed</option>
+                    <option value="Reported Completed">Reported Completed</option>
+                    <option value="Independently Verified">Independently Verified</option>
+                    <option value="Cancelled">Cancelled</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="pVerificationStatus" class="form-label required">Verification Status</label>
+                  <select id="pVerificationStatus" class="form-control" required>
+                    <option value="unverified">Awaiting Inspection</option>
+                    <option value="verified">Independently Verified by Committee</option>
+                    <option value="unconfirmed">Unable to Confirm</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="pDescription" class="form-label">Scope Description &amp; Targets</label>
+                <textarea id="pDescription" class="form-control" rows="3" placeholder="Technical specifications, target beneficiaries..."></textarea>
+              </div>
+
+              <div class="flex justify-end gap-2">
+                <button type="submit" id="saveProjectBtn" class="btn btn-primary btn-sm">Save Project Record</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Projects Data Table -->
+          <div class="table-responsive-wrapper card p-4">
+            <table class="data-table text-xs" id="adminProjectsTable">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 100px;">ID</th>
+                  <th scope="col">Project Name</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Verification</th>
+                  <th scope="col">Budget (MWK)</th>
+                  <th scope="col" class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProjectsTbody">
+                <tr><td colspan="8" class="text-center py-6 text-muted">Loading projects database...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL 2: COMMUNITY REPORTS CASE MANAGEMENT -->
+        <div id="adminReportsPanel" role="tabpanel" aria-labelledby="tabReportsBtn" class="admin-panel" hidden>
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <h2 class="text-xl font-bold">Community Issue Case Management</h2>
+              <p class="text-xs text-muted">Review resident issue submissions, assign ward officers, log referrals to District Council, and update resolution states.</p>
+            </div>
+            <div class="flex gap-2">
+              <select id="adminReportFilterStatus" class="form-control text-xs py-1">
+                <option value="all">All Statuses</option>
+                <option value="Submitted">Submitted</option>
+                <option value="Under Review">Under Review</option>
+                <option value="Assigned">Assigned</option>
+                <option value="Referred">Referred</option>
+                <option value="Resolved">Resolved</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-responsive-wrapper card p-4">
+            <table class="data-table text-xs" id="adminReportsTable">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 130px;">Ref #</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="text-right">Manage</th>
+                </tr>
+              </thead>
+              <tbody id="adminReportsTbody">
+                <tr><td colspan="7" class="text-center py-6 text-muted">Loading community reports...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL 3: SAFEGUARDING & CHILD PROTECTION INTAKE -->
+        <div id="adminSafeguardingPanel" role="tabpanel" aria-labelledby="tabSafeguardingBtn" class="admin-panel" hidden>
+          <div class="card p-4 mb-4 bg-surface border-2">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl text-accent">&#9888;</span>
+              <div>
+                <h3 class="font-bold text-sm">Protected Safeguarding Intake Queue</h3>
+                <p class="text-xs text-muted">Access strictly restricted to designated child protection and welfare officers. Submissions are air-gapped from regular case tracking.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive-wrapper card p-4">
+            <table class="data-table text-xs" id="adminSafeguardTable">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 140px;">Intake Key</th>
+                  <th scope="col">Timestamp</th>
+                  <th scope="col">Concern Nature</th>
+                  <th scope="col">Approx Location</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminSafeguardTbody">
+                <tr><td colspan="6" class="text-center py-6 text-muted">Loading confidential intake records...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL 4: SPORTS & LEAGUE ADMINISTRATION -->
+        <div id="adminSportsPanel" role="tabpanel" aria-labelledby="tabSportsAdminBtn" class="admin-panel" hidden>
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <h2 class="text-xl font-bold">Constituency League Administration</h2>
+              <p class="text-xs text-muted">Manage competition areas, teams, licensed players, upcoming fixtures, live match scorekeeping, and signed results.</p>
+            </div>
+            <div class="flex gap-2">
+              <button type="button" id="btnAdminAddMatch" class="btn btn-primary btn-sm">+ Schedule Fixture</button>
+              <button type="button" id="btnAdminAddTeam" class="btn btn-outline btn-sm">+ Register Team</button>
+            </div>
+          </div>
+
+          <!-- Live Scorekeeper Quick-Action Bar -->
+          <div class="card p-5 mb-6 bg-surface border">
+            <h3 class="font-bold text-sm mb-2">&#9679; Live Match Controller (Matchdesk)</h3>
+            <p class="text-xs text-muted mb-4">Select an active scheduled game to toggle verified LIVE broadcasting, update scores, and publish match events.</p>
+            <div class="grid grid-3 gap-4" id="liveMatchControlBar">
+              <select id="selectActiveMatchForLive" class="form-control text-xs">
+                <option value="">-- Select In-Progress Match --</option>
+              </select>
+              <div class="flex gap-2">
+                <input type="number" id="liveHomeScoreInput" class="form-control text-xs text-center font-bold" min="0" placeholder="Home">
+                <span class="self-center font-bold">-</span>
+                <input type="number" id="liveAwayScoreInput" class="form-control text-xs text-center font-bold" min="0" placeholder="Away">
+              </div>
+              <div class="flex gap-2">
+                <button type="button" id="btnPushLiveScore" class="btn btn-secondary btn-xs flex-1">Broadcast Live Score</button>
+                <button type="button" id="btnEndMatchFinal" class="btn btn-outline btn-xs">Finalize Match</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fixtures & Results List -->
+          <div class="table-responsive-wrapper card p-4">
+            <table class="data-table text-xs" id="adminMatchesTable">
+              <thead>
+                <tr>
+                  <th scope="col">Date &amp; Kickoff</th>
+                  <th scope="col">Zone</th>
+                  <th scope="col">Home Club</th>
+                  <th scope="col">Score</th>
+                  <th scope="col">Away Club</th>
+                  <th scope="col">Venue</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminMatchesTbody">
+                <tr><td colspan="8" class="text-center py-6 text-muted">Loading matches schedule...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL 5: BULLETINS & NEWS PUBLISHER -->
+        <div id="adminBulletinsPanel" role="tabpanel" aria-labelledby="tabBulletinsBtn" class="admin-panel" hidden>
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <h2 class="text-xl font-bold">Official Bulletins &amp; Press Announcements</h2>
+              <p class="text-xs text-muted">Draft, publish, and archive official notices on behalf of the Member of Parliament and parliamentary communications desk.</p>
+            </div>
+            <button type="button" id="btnNewBulletin" class="btn btn-primary btn-sm">+ Publish Bulletin</button>
+          </div>
+
+          <div class="table-responsive-wrapper card p-4">
+            <table class="data-table text-xs" id="adminBulletinsTable">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Author / Desk</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminBulletinsTbody">
+                <tr><td colspan="6" class="text-center py-6 text-muted">Loading bulletins archive...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PANEL 6: IMMUTABLE AUDIT LOGS -->
+        <div id="adminAuditPanel" role="tabpanel" aria-labelledby="tabAuditLogsBtn" class="admin-panel" hidden>
+          <div class="mb-4">
+            <h2 class="text-xl font-bold">Administrative Audit Log Trail</h2>
+            <p class="text-xs text-muted">Immutable cryptographic record of all administrative modifications, score updates, project status changes, and case assignments.</p>
+          </div>
+
+          <div class="table-responsive-wrapper card p-4">
+            <table class="data-table text-xs font-mono" id="adminAuditTable">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 180px;">Timestamp</th>
+                  <th scope="col">Actor</th>
+                  <th scope="col">Action Type</th>
+                  <th scope="col">Entity</th>
+                  <th scope="col">Entity ID</th>
+                  <th scope="col">Details</th>
+                </tr>
+              </thead>
+              <tbody id="adminAuditTbody">
+                <tr><td colspan="6" class="text-center py-6 text-muted">Loading system audit trail...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright-notice">
+          &copy; <span id="currentYear">2026</span> Mzimba South Luwerezi Superadmin Console. Protected Operational Environment.
+        </p>
+        <p class="footer-legal-notice">
+          All administrative sessions are protected by Row Level Security and immutable audit logging.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Compact Developer Credit Floating Badge (Bottom-Left) -->
+  <aside id="developerBadgeContainer" class="dev-badge-anchor" aria-label="Website Developer Information">
+    <button id="devBadgeBtn" class="dev-badge-trigger" aria-haspopup="dialog" aria-expanded="false" title="Website Developed & Maintained By Abraham Msofi">
+      <img src="assets/images/profile.jpg" alt="Abraham Msofi developer profile" class="dev-badge-img" width="42" height="42" loading="lazy">
+    </button>
+    <div id="devBadgeCard" class="dev-badge-card" role="dialog" aria-labelledby="devCardTitle" hidden>
+      <div class="dev-card-header">
+        <img src="assets/images/profile.jpg" alt="Abraham Msofi" class="dev-card-avatar" width="48" height="48">
+        <div>
+          <span class="dev-card-kicker">Website Developed &amp; Maintained By</span>
+          <h3 id="devCardTitle" class="dev-card-name">Abraham Msofi</h3>
+          <p class="dev-card-role">Web Developer &amp; Digital Solutions</p>
+        </div>
+        <button id="devCardCloseBtn" class="dev-card-close" aria-label="Close developer card" type="button">&times;</button>
+      </div>
+      <div class="dev-card-actions">
+        <a href="https://wa.me/265993984344" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-xs">
+          WhatsApp: +265 993 984 344
+        </a>
+        <a href="tel:+265895380422" class="btn btn-outline btn-xs">
+          Call: +265 895 380 422
+        </a>
+        <a href="tel:+265897228943" class="btn btn-outline btn-xs">
+          Call: +265 897 228 943
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main JavaScript Modules -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
