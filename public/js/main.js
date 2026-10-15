@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Main Application Orchestrator
+ * Mzimba Luwerezi Constituency — Main Application Orchestrator
  * Bootstraps i18n, navigation, responsive menus, page controllers, PWA service worker, and developer credit.
  */
 

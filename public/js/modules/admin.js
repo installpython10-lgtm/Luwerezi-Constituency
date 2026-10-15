@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Superadmin Console Module
+ * Mzimba Luwerezi Constituency — Superadmin Console Module
  * Protected administrative operations: project records, case triage, sports matchdesk, and audit logs.
  */
 

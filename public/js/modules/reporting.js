@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Community Reporting & Tracking Module
+ * Mzimba Luwerezi Constituency — Community Reporting & Tracking Module
  * Handles public issue submission, reference generation, status tracking, and safeguarding intake.
  */
 

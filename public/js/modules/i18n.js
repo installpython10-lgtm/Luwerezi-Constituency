@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Internationalization (i18n) Engine
+ * Mzimba Luwerezi Constituency — Internationalization (i18n) Engine
  * Manages runtime language switching between English & Chichewa with state persistence.
  */
 

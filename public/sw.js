@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Progressive Web App Service Worker
+ * Mzimba Luwerezi Constituency — Progressive Web App Service Worker
  * Caches public static assets only. Pages, authenticated data, and API responses are never cached.
  */
 

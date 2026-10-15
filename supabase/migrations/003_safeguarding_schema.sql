@@ -1,5 +1,5 @@
 -- ============================================================================
--- MZIMBA SOUTH LUWEREZI CONSTITUENCY PORTAL
+-- Mzimba Luwerezi CONSTITUENCY PORTAL
 -- Migration 003: Confidential Safeguarding & Welfare Schema
 -- Tables: safeguarding_reports, safeguarding_access_log
 --

@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Resident Portal & Dashboard Module
+ * Mzimba Luwerezi Constituency — Resident Portal & Dashboard Module
  * Handles resident authentication tabs, private case history, and case detail modals.
  */
 

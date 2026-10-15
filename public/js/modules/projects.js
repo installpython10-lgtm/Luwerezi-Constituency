@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Projects & Oversight Module
+ * Mzimba Luwerezi Constituency — Projects & Oversight Module
  * Handles project register querying, search filters, detail inspection, and oversight field logs.
  */
 
@@ -245,7 +245,7 @@ export async function initProjectDetail() {
     document.getElementById('pjCategoryBadge').textContent = project.category || 'Infrastructure';
     document.getElementById('pjStatusBadge').textContent = project.status || 'Active';
     document.getElementById('pjTitle').textContent = project.name;
-    document.getElementById('pjLocationText').textContent = project.location || 'Mzimba South Luwerezi';
+    document.getElementById('pjLocationText').textContent = project.location || 'Mzimba Luwerezi';
     document.getElementById('projectBreadcrumbTitle').textContent = project.name;
 
     // Verification Box

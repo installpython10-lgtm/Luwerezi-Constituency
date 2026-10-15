@@ -1,4 +1,4 @@
-# Mzimba South Luwerezi Constituency Portal
+# Mzimba Luwerezi Constituency Portal
 
 Static HTML/CSS/JavaScript website served from `public/`. Supabase is optional:
 without valid public configuration, the public pages remain available and

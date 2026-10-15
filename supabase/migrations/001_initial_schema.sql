@@ -1,5 +1,5 @@
 -- ============================================================================
--- MZIMBA SOUTH LUWEREZI CONSTITUENCY PORTAL
+-- Mzimba Luwerezi CONSTITUENCY PORTAL
 -- Migration 001: Initial Core Schema
 -- Tables: profiles, user_roles, development_projects, community_reports
 -- ============================================================================

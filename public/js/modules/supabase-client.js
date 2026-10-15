@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency - Supabase client and auth module.
+ * Mzimba Luwerezi Constituency - Supabase client and auth module.
  * Browser configuration contains only the public Project URL and publishable key.
  */
 
@@ -8,17 +8,12 @@ export let SUPABASE_UNAVAILABLE_MESSAGE =
 
 export const DESIGNATED_SUPERADMIN_ID = '696a44db-fd7d-4131-8175-e00a23a19e67';
 
-const SUPABASE_CONFIG = {
-  url: 'https://tspefloocgskxwrvosgd.supabase.co',
-  publishableKey: 'sb_publishable_an27ypVWPu_40g_nb7EHXA_vax0fyg2'
-};
-
 let configPromise = null;
 let supabasePromise = null;
-let supabaseConfig = SUPABASE_CONFIG;
+let supabaseConfig = null;
 
 /**
- * Validates the public browser configuration directly with the Supabase Auth API.
+ * Loads the public browser configuration from the same-origin Pages Function.
  * @returns {Promise<boolean>}
  */
 export function loadSupabaseConfig() {
@@ -26,40 +21,46 @@ export function loadSupabaseConfig() {
     configPromise = (async () => {
       const controller = new AbortController();
       const timeoutId = window.setTimeout(() => controller.abort(), 5000);
+      const configUrl = new URL('../../api/supabase-config', import.meta.url);
+      let response;
 
       try {
-        if (!isValidSupabaseConfig(supabaseConfig)) {
-          SUPABASE_UNAVAILABLE_MESSAGE =
-            'Supabase URL or public anon/publishable key is invalid.';
-          supabaseConfig = null;
-          return false;
-        }
-
-        const response = await fetch(`${supabaseConfig.url}/auth/v1/settings`, {
-          headers: {
-            Accept: 'application/json',
-            apikey: supabaseConfig.publishableKey
-          },
+        response = await fetch(configUrl, {
+          headers: { Accept: 'application/json' },
           signal: controller.signal
         });
+      } catch {
+        window.clearTimeout(timeoutId);
+        SUPABASE_UNAVAILABLE_MESSAGE =
+          'Could not reach the Supabase configuration service. Check your connection and try again.';
+        supabaseConfig = null;
+        return false;
+      }
 
-        if (response.status === 401 || response.status === 403) {
-          SUPABASE_UNAVAILABLE_MESSAGE =
-            'Supabase rejected the configured public key. Check that the anon/publishable key is copied from this project.';
+      try {
+        const result = await response.json();
+        if (!response.ok || result?.configured !== true) {
+          SUPABASE_UNAVAILABLE_MESSAGE = getSupabaseConfigError(response.status, result?.reason);
           supabaseConfig = null;
           return false;
         }
-        if (!response.ok) {
+
+        const config = {
+          url: result.supabaseUrl,
+          publishableKey: result.publishableKey
+        };
+        if (!isValidSupabaseConfig(config)) {
           SUPABASE_UNAVAILABLE_MESSAGE =
-            'The Supabase Auth service is unavailable. Check the project status and try again.';
+            'The Supabase configuration service returned an invalid public URL or publishable key.';
           supabaseConfig = null;
           return false;
         }
 
+        supabaseConfig = config;
         return true;
       } catch {
         SUPABASE_UNAVAILABLE_MESSAGE =
-          'Could not reach the Supabase project. Check your connection and the project status.';
+          'The Supabase configuration service returned an unreadable response. Check the Pages Function deployment.';
         supabaseConfig = null;
         return false;
       } finally {
@@ -69,6 +70,22 @@ export function loadSupabaseConfig() {
   }
 
   return configPromise;
+}
+
+function getSupabaseConfigError(status, reason) {
+  if (reason === 'invalid_public_key') {
+    return 'Supabase rejected the configured public key. Check the publishable or anon key in the site configuration.';
+  }
+  if (reason === 'project_unreachable') {
+    return 'The Supabase project could not be reached. Check the project status and try again.';
+  }
+  if (reason === 'auth_service_unavailable') {
+    return 'The Supabase Auth service is unavailable. Check the project status and try again.';
+  }
+  if (status === 404) {
+    return 'The Supabase configuration endpoint is unavailable. Deploy the Pages Function and configure its public settings.';
+  }
+  return 'Supabase is not configured for this website. Configure SUPABASE_URL and a public publishable or anon key.';
 }
 
 function isPublicSupabaseKey(key) {

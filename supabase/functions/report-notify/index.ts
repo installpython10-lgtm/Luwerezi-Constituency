@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Community Report Notification Edge Function
+ * Mzimba Luwerezi Constituency — Community Report Notification Edge Function
  * Supabase Serverless Edge Function (Deno)
  * 
  * PURPOSE:
@@ -52,14 +52,14 @@ serve(async (req: Request) => {
 
     // If resident provided an email address, prepare transactional notification
     if (payload.recipient_email) {
-      const siteUrl = Deno.env.get("SITE_PUBLIC_URL") || "https://mzimba-south-luwerezi.pages.dev";
+      const siteUrl = Deno.env.get("SITE_PUBLIC_URL") || "https://Mzimba Luwerezi.pages.dev";
       const trackingLink = `${siteUrl}/track-report.html?ref=${encodeURIComponent(payload.reference_number)}`;
 
-      const emailSubject = `Update on Community Report ${payload.reference_number} — Mzimba South Luwerezi`;
+      const emailSubject = `Update on Community Report ${payload.reference_number} — Mzimba Luwerezi`;
       const emailBody = `
 Dear Resident,
 
-Your community issue report has received an official status update from the Mzimba South Luwerezi Constituency Parliamentary Office:
+Your community issue report has received an official status update from the Mzimba Luwerezi Constituency Parliamentary Office:
 
 Reference Number: ${payload.reference_number}
 Current Status: ${payload.status}
@@ -71,7 +71,7 @@ ${trackingLink}
 Thank you for your active civic participation in developing our constituency.
 
 Office of Hon. Fischer Nkhwazi, Member of Parliament
-Mzimba South Luwerezi Constituency
+Mzimba Luwerezi Constituency
 Muumoza Kutukula Chigawa Chithu
       `.trim();
 

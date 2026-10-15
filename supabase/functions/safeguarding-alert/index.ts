@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Safeguarding Alert Edge Function
+ * Mzimba Luwerezi Constituency — Safeguarding Alert Edge Function
  * Supabase Serverless Edge Function (Deno)
  * 
  * STRICT PRIVACY RESTRICTIONS:

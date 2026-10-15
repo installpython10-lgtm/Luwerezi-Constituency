@@ -1,5 +1,5 @@
 -- ============================================================================
--- MZIMBA SOUTH LUWEREZI CONSTITUENCY PORTAL
+-- Mzimba Luwerezi CONSTITUENCY PORTAL
 -- Migration 004: Row Level Security (RLS) & Access Policies
 -- 
 -- Enforces zero unauthorized access:

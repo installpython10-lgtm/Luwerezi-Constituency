@@ -1,14 +1,14 @@
 /**
- * Mzimba South Luwerezi Constituency — Chichewa Translation Dictionary
+ * Mzimba Luwerezi Constituency — Chichewa Translation Dictionary
  * Zomasulira zonse m'Chichewa zolondola komanso zomasuliridwa mwachibadwa pa ntchito za boma ndi anthu.
  */
 
 export default {
   /* Site & Top Bar */
-  site_title: "MZIMBA SOUTH LUWEREZI",
+  site_title: "Mzimba Luwerezi",
   site_subtitle: "Tsamba Lovomerezeka la Utumiki wa Chigawa",
   top_bar_badge: "TSAMBA LOVOMEREZEKA LA CHIGAWA",
-  top_bar_text: "Boma la Malawi • Ofesi ya Phungu wa Nyumba ya Malamulo Mzimba South Luwerezi",
+  top_bar_text: "Boma la Malawi • Ofesi ya Phungu wa Nyumba ya Malamulo Mzimba Luwerezi",
   skip_to_content: "Pitani ku mndandanda weniweni",
 
   /* Navigation Links */
@@ -39,7 +39,7 @@ export default {
   /* Hero Section */
   hero_badge: "KUFOTOKOZA MOCHITA CHITHU • UTUMIKI KWA NZIKA",
   hero_heading: "Utsogoleri wa Chigawa Wozikidwa pa Umboni, Chiwonekere, ndi Ntchito Zenizeni.",
-  hero_description: "Takulandirani pa tsamba lovomerezeka la chigawa cha Mzimba South Luwerezi, Malawi. Tsatirani ntchito zachitukuko zovomerezeka, nenani mavuto a m'midzi mwanu, onani lipoti lochokera ku makomiti oyang'anira ntchito, komanso tsatirani masewero a mpikisano wa m'chigawa.",
+  hero_description: "Takulandirani pa tsamba lovomerezeka la chigawa cha Mzimba Luwerezi, Malawi. Tsatirani ntchito zachitukuko zovomerezeka, nenani mavuto a m'midzi mwanu, onani lipoti lochokera ku makomiti oyang'anira ntchito, komanso tsatirani masewero a mpikisano wa m'chigawa.",
   hero_btn_projects: "Onani Ntchito Zachitukuko",
   hero_btn_report: "Nenani Vuto La M'mudzi",
   motto_subcaption: "Muumoza Kutukula Chigawa Chithu",
@@ -73,7 +73,7 @@ export default {
   label_leadership: "KUIMIRA NDI UTUMIKI",
   leadership_heading: "Ofesi ya Chigawa ndi Utsogoleri",
   leadership_lead: "Njira zovomerezeka zolankhulirana ndi Phungu wa Nyumba ya Malamulo ndi ogwira ntchito mu ofesi ya chigawa.",
-  mp_role_label: "Phungu wa Nyumba ya Malamulo, Mzimba South Luwerezi",
+  mp_role_label: "Phungu wa Nyumba ya Malamulo, Mzimba Luwerezi",
   mp_bio_text: "Wodzipereka pa utsogoleri wowonekera bwino, chitukuko choyendetsedwa ndi anthu, kuyang'anira ntchito zachitukuko, ndi mwayi kwa achinyamata.",
   pa_role_label: "Mthandizi Wapadera wa Phungu (PA)",
   pa_bio_text: "Amagwirizanitsa mafunso a ku nyumba ya malamulo, ndondomeko za ulendo wa phungu, ndi madandaulo a m'madera.",
@@ -136,7 +136,7 @@ export default {
   /* Independent Oversight */
   badge_social_auditing: "CHIWONEKERE NDI KAFUKUFUKU WA NZIKA",
   oversight_heading: "Ndondomeko Yoyang'anira Kwapadera",
-  oversight_lead: "M'chigawa cha Mzimba South Luwerezi, palibe ntchito yomwe imatsimikizidwa kuti yatha chifukwa choti akuluakulu anena chabe ayi. Ntchito iliyonse iyenera kuyendera pansi ndi makomiti a m'midzi.",
+  oversight_lead: "M'chigawa cha Mzimba Luwerezi, palibe ntchito yomwe imatsimikizidwa kuti yatha chifukwa choti akuluakulu anena chabe ayi. Ntchito iliyonse iyenera kuyendera pansi ndi makomiti a m'midzi.",
   oversight_principle_1_title: "Malipoti Ochokera Kumbali Ziwiri",
   oversight_principle_1_desc: "Zonena za makontalakitala kapena khonsolo zimasungidwa mosiyana ndi zomwe apezamo anthu oyang'anira a m'midzi.",
   oversight_principle_2_title: "Zithunzi ndi Malo Enieni (GPS)",
@@ -144,7 +144,7 @@ export default {
   oversight_principle_3_title: "Kufotokoza Mosamala",
   oversight_principle_3_desc: "Zikalata zikasowa, timalemba kuti \"Sizinatsimikizidwe\". Zimenezi sizikutanthauza kuimba munthu mlandu koma kusonyeza kuti umboni sunakwane.",
   status_definitions_heading: "Tanthauzo la Mmene Ntchito Zilili",
-  status_definitions_lead: "Dziwani zomwe chizindikiro chilichonse chimatanthauza kwa nzika za Mzimba South Luwerezi.",
+  status_definitions_lead: "Dziwani zomwe chizindikiro chilichonse chimatanthauza kwa nzika za Mzimba Luwerezi.",
   col_status_label: "Chizindikiro",
   col_administrative_meaning: "Tanthauzo la Ofesi",
   col_verification_requirement: "Zofunika Kuti Chitsimikizidwe",
@@ -244,7 +244,7 @@ export default {
 
   /* Sports */
   badge_youth_sports: "CHITUKUKO CHA ACHINYAMATA NDI MASEWERO",
-  sports_hub_title: "Mpikisano wa Chigawa cha Mzimba South Luwerezi",
+  sports_hub_title: "Mpikisano wa Chigawa cha Mzimba Luwerezi",
   sports_hub_lead: "Malo a masewero a mpira wamiyendo ndi kutukula luso la achinyamata. Magome amakono, zotsatira zotsimikizika, mndandanda wa osewera, ndi masewero amene akuseweredwa panthawiyi m'madera onse a chigawa.",
   btn_enter_live_center: "Onani Masewero Amakono →",
   sports_sub_tables_title: "Magome a Mpikisano",
@@ -301,7 +301,7 @@ export default {
   /* Sports Fixtures */
   badge_match_center: "KALENDA YA MASEWERO A CHIGAWA",
   fixtures_page_title: "Masewero Amene Akubwera ndi Zotsatira Zovomerezeka",
-  fixtures_page_lead: "Ndondomeko ya masewero, mabwalo, nthawi zoyambira, ndi zotsatira zovomerezeka m'madera onse a Mzimba South Luwerezi.",
+  fixtures_page_lead: "Ndondomeko ya masewero, mabwalo, nthawi zoyambira, ndi zotsatira zovomerezeka m'madera onse a Mzimba Luwerezi.",
   tab_upcoming_fixtures: "Masewero Amene Akubwera",
   tab_verified_results: "Zotsatira Zovomerezeka",
   btn_check_live_now: "Bwalo la Masewero a Live",
@@ -329,7 +329,7 @@ export default {
   /* Sports Teams */
   badge_club_rosters: "MNDANDANDA WOVOMEREZEKA WA MATIMU",
   teams_page_title: "Matimu ndi Osewera",
-  teams_page_lead: "Mndandanda wovomerezeka wa makalabu a m'madera, mabwalo awo, osewera olembetsedwa, ndi mbiri zawo zovomerezedwa ndi komiti ya masewero ya Mzimba South Luwerezi.",
+  teams_page_lead: "Mndandanda wovomerezeka wa makalabu a m'madera, mabwalo awo, osewera olembetsedwa, ndi mbiri zawo zovomerezedwa ndi komiti ya masewero ya Mzimba Luwerezi.",
   label_search_team: "Fufuzani Timu kapena Wosewera",
   showing_teams_label: "Matimu owonetsedwa",
   btn_view_standings: "Onani Magome",
@@ -345,7 +345,7 @@ export default {
   /* Sports Stats */
   badge_individual_honours: "LUSO LA MUNTHU ALIYENSE NDI ZOLEMBEDWA",
   stats_page_title: "Oponda Zigoli Zambiri ndi Zowerengera za Mpikisano",
-  stats_page_lead: "Zolembedwa zovomerezeka za osewera ndi matimu a mu mpikisano wa Mzimba South Luwerezi. Oponda zigoli, makipa osagwidwa, ndi makhadi olandiridwa pamasewero.",
+  stats_page_lead: "Zolembedwa zovomerezeka za osewera ndi matimu a mu mpikisano wa Mzimba Luwerezi. Oponda zigoli, makipa osagwidwa, ndi makhadi olandiridwa pamasewero.",
   heading_top_goalscorers: "Oponda Zigoli Zambiri (Golden Boot)",
   top_goalscorers_sub: "Zigoli zotsimikizika ndi zikalata za oyimbira.",
   th_zone: "Zoni",

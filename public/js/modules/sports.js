@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Sports & League Module
+ * Mzimba Luwerezi Constituency — Sports & League Module
  * Standings calculation, fixtures scheduling, live scorekeeper feed, player rosters & golden boot rankings.
  */
 

@@ -1,5 +1,5 @@
 /**
- * Mzimba South Luwerezi Constituency — Compact Developer Profile Module
+ * Mzimba Luwerezi Constituency — Compact Developer Profile Module
  * Controls the subtle floating bottom-left badge and accessible contact card for Abraham Msofi.
  */
 

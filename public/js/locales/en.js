@@ -1,14 +1,14 @@
 /**
- * Mzimba South Luwerezi Constituency — English Translation Dictionary
+ * Mzimba Luwerezi Constituency — English Translation Dictionary
  * Comprehensive localization strings for navigation, public services, forms, sports & administration.
  */
 
 export default {
   /* Site & Top Bar */
-  site_title: "MZIMBA SOUTH LUWEREZI",
+  site_title: "Mzimba Luwerezi",
   site_subtitle: "Constituency Public Service Portal",
   top_bar_badge: "OFFICIAL PUBLIC PORTAL",
-  top_bar_text: "Republic of Malawi • Mzimba South Luwerezi Parliamentary Office",
+  top_bar_text: "Republic of Malawi • Mzimba Luwerezi Parliamentary Office",
   skip_to_content: "Skip to main content",
 
   /* Navigation Links */
@@ -39,7 +39,7 @@ export default {
   /* Hero Section */
   hero_badge: "PUBLIC ACCOUNTABILITY • SERVICE TO RESIDENTS",
   hero_heading: "Constituency Governance Built on Evidence, Transparency, and Action.",
-  hero_description: "Welcome to the official digital portal for Mzimba South Luwerezi Constituency, Malawi. Follow verified development projects, report public infrastructure issues, follow independent oversight audits, and track our local constituency sports league.",
+  hero_description: "Welcome to the official digital portal for Mzimba Luwerezi Constituency, Malawi. Follow verified development projects, report public infrastructure issues, follow independent oversight audits, and track our local constituency sports league.",
   hero_btn_projects: "Explore Projects Register",
   hero_btn_report: "Report Community Issue",
   motto_subcaption: "Together Developing Our Constituency",
@@ -73,7 +73,7 @@ export default {
   label_leadership: "REPRESENTATION & SERVICE",
   leadership_heading: "Constituency Office & Leadership",
   leadership_lead: "Direct, authenticated communication channels for the Member of Parliament and parliamentary office staff.",
-  mp_role_label: "Member of Parliament, Mzimba South Luwerezi",
+  mp_role_label: "Member of Parliament, Mzimba Luwerezi",
   mp_bio_text: "Committed to transparent public governance, community-led development, independent project verification, and youth opportunity.",
   pa_role_label: "Personal Assistant to the MP",
   pa_bio_text: "Coordinates parliamentary inquiries, official constituency schedules, and administrative community requests.",
@@ -136,7 +136,7 @@ export default {
   /* Independent Oversight */
   badge_social_auditing: "CIVIC INTEGRITY & SOCIAL AUDITING",
   oversight_heading: "Independent Verification Framework",
-  oversight_lead: "In Mzimba South Luwerezi, no public infrastructure project is certified as completed simply because an administrative claim is filed. Every project must undergo independent ground inspection by community verification committees.",
+  oversight_lead: "In Mzimba Luwerezi, no public infrastructure project is certified as completed simply because an administrative claim is filed. Every project must undergo independent ground inspection by community verification committees.",
   oversight_principle_1_title: "Dual-Source Reporting",
   oversight_principle_1_desc: "Official progress statements from contractors and local council desks are stored separately from physical inspection findings logged by community observers.",
   oversight_principle_2_title: "Photographic & GPS Evidence",
@@ -144,7 +144,7 @@ export default {
   oversight_principle_3_title: "Responsible Disclosure",
   oversight_principle_3_desc: "When paperwork is incomplete, the project is marked \"Unable to Confirm\". This serves as an evidentiary disclaimer, not an unsubstantiated accusation of misconduct.",
   status_definitions_heading: "Standardized Project Status Definitions",
-  status_definitions_lead: "Understanding what each status indicator on our public register guarantees to the residents of Mzimba South Luwerezi.",
+  status_definitions_lead: "Understanding what each status indicator on our public register guarantees to the residents of Mzimba Luwerezi.",
   col_status_label: "Status Label",
   col_administrative_meaning: "Official Meaning",
   col_verification_requirement: "Verification Condition Required",
@@ -155,7 +155,7 @@ export default {
   loading_audit_logs: "Loading verified field audit logs...",
   audit_logs_db_notice: "Inspecting database for documented community oversight reports.",
   audit_citizen_heading: "Participate in Community Monitoring",
-  audit_citizen_desc: "Are you a member of a local School Management Committee, Village Health Action Team, or Water Point Committee in Mzimba South Luwerezi? You can submit ground verification notes directly to the oversight coordinator.",
+  audit_citizen_desc: "Are you a member of a local School Management Committee, Village Health Action Team, or Water Point Committee in Mzimba Luwerezi? You can submit ground verification notes directly to the oversight coordinator.",
   btn_submit_field_finding: "Submit Field Finding",
   btn_contact_oversight_team: "Contact Oversight Team",
 
@@ -186,7 +186,7 @@ export default {
   label_phone_number: "Phone Number (Call or WhatsApp)",
   hint_phone_contact: "Enables our field team to call for directions if necessary.",
   label_email_address: "Email Address (Optional)",
-  confidentiality_statement: "Confidentiality Notice: Information collected here is used solely by the Mzimba South Luwerezi parliamentary team and relevant local authorities (M'mbelwa District Council, Water Board) to address the issue. Anonymous reports are respected; no personal tracking data is shared publicly.",
+  confidentiality_statement: "Confidentiality Notice: Information collected here is used solely by the Mzimba Luwerezi parliamentary team and relevant local authorities (M'mbelwa District Council, Water Board) to address the issue. Anonymous reports are respected; no personal tracking data is shared publicly.",
   btn_submit_report_now: "Submit Community Report",
   btn_already_have_ref: "Already have a reference number?",
   sidebar_how_it_works_title: "How Reports Are Handled",
@@ -245,7 +245,7 @@ export default {
 
   /* Sports */
   badge_youth_sports: "YOUTH EMPOWERMENT & GRASSROOTS SPORTS",
-  sports_hub_title: "Mzimba South Luwerezi Constituency League",
+  sports_hub_title: "Mzimba Luwerezi Constituency League",
   sports_hub_lead: "Official competition hub for constituency football and grassroots athletic development. Real-time standings, verified fixture results, player registration rosters, and live match updates across all participating geographical areas.",
   btn_enter_live_center: "Follow Live Center →",
   sports_sub_tables_title: "League Standings",
@@ -302,7 +302,7 @@ export default {
   /* Sports Fixtures */
   badge_match_center: "CONSTITUENCY MATCH CALENDAR",
   fixtures_page_title: "Fixtures & Verified Match Results",
-  fixtures_page_lead: "Official schedules, assigned venues, kickoff times, and audited full-time scorecards across all competition areas in Mzimba South Luwerezi.",
+  fixtures_page_lead: "Official schedules, assigned venues, kickoff times, and audited full-time scorecards across all competition areas in Mzimba Luwerezi.",
   tab_upcoming_fixtures: "Upcoming Fixtures",
   tab_verified_results: "Verified Results",
   btn_check_live_now: "Live Match Room",
@@ -330,7 +330,7 @@ export default {
   /* Sports Teams */
   badge_club_rosters: "OFFICIAL REGISTRATION REGISTRY",
   teams_page_title: "Teams & Player Profiles",
-  teams_page_lead: "Verified directory of community clubs, home pitches, licensed squad rosters, and player profiles registered with the Mzimba South Luwerezi sports coordination committee.",
+  teams_page_lead: "Verified directory of community clubs, home pitches, licensed squad rosters, and player profiles registered with the Mzimba Luwerezi sports coordination committee.",
   label_search_team: "Search Team or Player",
   showing_teams_label: "Showing verified teams",
   btn_view_standings: "View Standings",
@@ -346,7 +346,7 @@ export default {
   /* Sports Stats */
   badge_individual_honours: "PERFORMANCE METRICS & HONOURS",
   stats_page_title: "Top Goal Scorers & League Statistics",
-  stats_page_lead: "Official individual and team records for Mzimba South Luwerezi Constituency competitions. Golden Boot leaderboards, clean sheets, and fair-play disciplinary cards audited after every fixture.",
+  stats_page_lead: "Official individual and team records for Mzimba Luwerezi Constituency competitions. Golden Boot leaderboards, clean sheets, and fair-play disciplinary cards audited after every fixture.",
   heading_top_goalscorers: "Top Goal Scorers",
   top_goalscorers_sub: "Goals confirmed by official referee scorecards.",
   th_zone: "Zone",

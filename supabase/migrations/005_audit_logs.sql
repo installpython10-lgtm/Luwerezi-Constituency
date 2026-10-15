@@ -1,5 +1,5 @@
 -- ============================================================================
--- MZIMBA SOUTH LUWEREZI CONSTITUENCY PORTAL
+-- Mzimba Luwerezi CONSTITUENCY PORTAL
 -- Migration 005: Immutable Administrative Audit Logs
 -- Table: admin_audit_logs
 --

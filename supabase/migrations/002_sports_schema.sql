@@ -1,5 +1,5 @@
 -- ============================================================================
--- MZIMBA SOUTH LUWEREZI CONSTITUENCY PORTAL
+-- Mzimba Luwerezi CONSTITUENCY PORTAL
 -- Migration 002: Sports & League Management Schema
 -- Tables: sports_seasons, sports_areas, sports_teams, sports_players,
 --         sports_matches, sports_match_events
